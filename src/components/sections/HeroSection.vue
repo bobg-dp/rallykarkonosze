@@ -19,49 +19,51 @@
     </div>
 
     <!-- Content -->
-    <div class="relative z-20 flex flex-col items-center justify-center h-full text-center px-6">
-      <!-- Splash logo -->
-      <div ref="logoRef" class="mb-6 md:mb-8 opacity-0">
+    <div class="relative z-20 flex flex-col md:flex-row items-center justify-center h-full px-6 md:px-12 lg:px-20 gap-6 md:gap-10 lg:gap-16 text-center md:text-left">
+
+      <!-- Logo splash – lewa strona na desktop -->
+      <div ref="logoRef" class="shrink-0 opacity-0">
         <img
           src="/logo-splash.png"
           alt="AMG Rally Karkonosze"
-          class="h-32 md:h-48 lg:h-64 w-auto mx-auto drop-shadow-2xl"
+          class="h-40 md:h-56 lg:h-72 xl:h-80 w-auto drop-shadow-2xl"
         />
       </div>
 
-      <!-- Tytuł rajdu -->
-      <h1
-        ref="titleRef"
-        class="font-display font-black uppercase text-white text-5xl md:text-7xl lg:text-9xl leading-none tracking-tight opacity-0 drop-shadow-xl"
-      >
-        <span class="text-rally-yellow">AMG</span> Rally<br/>
-        <span class="text-white">Karkonosze</span>
-      </h1>
+      <!-- Treść – prawa strona na desktop -->
+      <div>
+        <!-- Tytuł rajdu -->
+        <h1
+          ref="titleRef"
+          class="font-display font-black uppercase text-white text-5xl md:text-6xl lg:text-8xl xl:text-9xl leading-none tracking-tight opacity-0 drop-shadow-xl"
+        >
+          <span class="text-rally-yellow">AMG</span> Rally<br/>
+          <span class="text-white">Karkonosze</span>
+        </h1>
 
-      <!-- Data i miejsce -->
-      <div ref="dateRef" class="mt-6 md:mt-8 opacity-0">
-        <div class="flex flex-col md:flex-row items-center gap-2 md:gap-6">
-          <div class="flex items-center gap-3">
+        <!-- Data i miejsce -->
+        <div ref="dateRef" class="mt-5 md:mt-6 opacity-0">
+          <div class="flex items-center justify-center md:justify-start gap-3">
             <div class="w-8 h-0.5 bg-rally-yellow"></div>
-            <span class="font-display font-bold uppercase tracking-widest text-white text-lg md:text-2xl">
+            <span class="font-display font-bold uppercase tracking-widest text-white text-base md:text-xl lg:text-2xl">
               13–14 Czerwiec 2026
             </span>
             <div class="w-8 h-0.5 bg-rally-yellow"></div>
           </div>
+          <p class="font-display font-semibold uppercase tracking-[0.3em] text-rally-yellow text-sm md:text-base lg:text-lg mt-2">
+            Jelenia Góra
+          </p>
         </div>
-        <p class="font-display font-semibold uppercase tracking-[0.3em] text-rally-yellow text-sm md:text-lg mt-2">
-          Jelenia Góra
-        </p>
-      </div>
 
-      <!-- Badges rangi -->
-      <div ref="badgesRef" class="mt-6 flex flex-col sm:flex-row items-center gap-3 opacity-0">
-        <span class="bg-rally-yellow text-rally-black font-display font-bold uppercase text-xs md:text-sm px-4 py-2 tracking-wider">
-          Runda RSMDS
-        </span>
-        <span class="border border-white text-white font-display font-bold uppercase text-xs md:text-sm px-4 py-2 tracking-wider">
-          Runda Mistrzostw Południa
-        </span>
+        <!-- Badges rangi -->
+        <div ref="badgesRef" class="mt-5 flex flex-col sm:flex-row items-center md:items-start gap-3 opacity-0">
+          <span class="bg-rally-yellow text-rally-black font-display font-bold uppercase text-xs md:text-sm px-4 py-2 tracking-wider">
+            Runda RSMDS
+          </span>
+          <span class="border border-white text-white font-display font-bold uppercase text-xs md:text-sm px-4 py-2 tracking-wider">
+            Runda Mistrzostw Południa
+          </span>
+        </div>
       </div>
     </div>
 
@@ -83,17 +85,16 @@ const badgesRef = ref(null)
 onMounted(() => {
   const tl = gsap.timeline({ delay: 0.3 })
 
-  tl.to(logoRef.value, {
-    opacity: 1,
-    y: 0,
-    duration: 0.8,
-    ease: 'power3.out',
-    from: { y: -30 },
-  })
+  // Logo wjeżdża z lewej
+  tl.fromTo(logoRef.value,
+    { opacity: 0, x: -50 },
+    { opacity: 1, x: 0, duration: 0.9, ease: 'power3.out' }
+  )
+  // Tytuł wjeżdża z prawej
   .fromTo(titleRef.value,
-    { opacity: 0, y: 40, skewY: 2 },
-    { opacity: 1, y: 0, skewY: 0, duration: 1, ease: 'power4.out' },
-    '-=0.3'
+    { opacity: 0, x: 40, skewY: 1.5 },
+    { opacity: 1, x: 0, skewY: 0, duration: 1, ease: 'power4.out' },
+    '-=0.5'
   )
   .fromTo(dateRef.value,
     { opacity: 0, y: 20 },
