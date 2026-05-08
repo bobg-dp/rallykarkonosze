@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+@theme {
+  --color-rally-yellow: #F8C800;
+  --color-rally-yellow-dark: #CC9804;
+  --color-rally-black: #131414;
+  --color-rally-black-deep: #0D0D0D;
+  --color-rally-gray: #21221E;
+
+  --font-family-display: 'Barlow Condensed', ui-sans-serif, system-ui, sans-serif;
+  --font-family-body: 'Barlow', ui-sans-serif, system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family-body);
+  background-color: #fff;
+  color: var(--color-rally-black);
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.font-display {
+  font-family: var(--font-family-display);
+}
