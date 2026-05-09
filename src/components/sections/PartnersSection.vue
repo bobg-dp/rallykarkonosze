@@ -32,7 +32,7 @@
       <!-- Partnerzy główni -->
       <div class="mb-4">
         <h3 class="font-display font-bold uppercase tracking-widest text-rally-black text-sm mb-6 text-center opacity-50">Partnerzy główni</h3>
-        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 mb-8">
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 mb-8">
           <PartnerLogo v-for="item in mainPartners" :key="item.name" :label="item.name" :logo="item.logo" />
         </div>
       </div>
