@@ -37,6 +37,7 @@ const latestNews = [
     date: '5 maja 2026',
     category: 'Zapisy',
     url: '/aktualnosci/1',
+    image: 'https://images.unsplash.com/photo-1503376780353-7e6692767c2e?auto=format&fit=crop&w=1200&q=80',
   },
   {
     id: 2,
@@ -45,6 +46,7 @@ const latestNews = [
     date: '28 kwietnia 2026',
     category: 'Trasy',
     url: '/aktualnosci/2',
+    image: 'https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=1200&q=80',
   },
   {
     id: 3,
@@ -53,6 +55,7 @@ const latestNews = [
     date: '20 kwietnia 2026',
     category: 'Partnerzy',
     url: '/aktualnosci/3',
+    image: 'https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1200&q=80',
   },
 ]
 </script>

@@ -4,7 +4,10 @@
     class="relative w-full overflow-hidden"
     style="height: 100svh; min-height: 600px;"
   >
-    <!-- Background gradient placeholder (zastąpić filmem/zdjęciem) -->
+    <!-- Background photo -->
+    <div class="absolute inset-0 hero-photo"></div>
+
+    <!-- Background gradient / darkening -->
     <div class="absolute inset-0 hero-bg"></div>
 
     <!-- Żółto-czarne wstawki rajdowe – checker pattern overlay -->
@@ -67,6 +70,13 @@
       </div>
     </div>
 
+    <!-- Photo credit -->
+    <div class="absolute bottom-4 right-4 md:bottom-6 md:right-8 z-20 pointer-events-none">
+      <p class="font-display text-[10px] md:text-xs uppercase tracking-[0.25em] text-white/45 drop-shadow-sm">
+        foto: Gabapix
+      </p>
+    </div>
+
     <!-- Scroll arrow -->
     <ScrollArrow />
   </section>
@@ -114,7 +124,15 @@ onMounted(() => {
   background:
     radial-gradient(ellipse at 20% 50%, rgba(248,200,0,0.08) 0%, transparent 60%),
     radial-gradient(ellipse at 80% 20%, rgba(248,200,0,0.05) 0%, transparent 50%),
-    linear-gradient(160deg, #0D0D0D 0%, #131414 40%, #21221E 70%, #0D0D0D 100%);
+    linear-gradient(160deg, rgba(13,13,13,0.86) 0%, rgba(19,20,20,0.74) 40%, rgba(33,34,30,0.72) 70%, rgba(13,13,13,0.88) 100%);
+}
+
+.hero-photo {
+  background-image: url('/hero.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transform: scale(1.03);
 }
 
 .checker-overlay {
