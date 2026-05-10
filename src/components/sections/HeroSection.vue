@@ -71,10 +71,18 @@
     </div>
 
     <!-- Photo credit -->
-    <div class="absolute bottom-4 right-4 md:bottom-6 md:right-8 z-20 pointer-events-none">
-      <p class="font-display text-[10px] md:text-xs uppercase tracking-[0.25em] text-white/45 drop-shadow-sm">
-        foto: Gabapix
-      </p>
+    <div class="absolute bottom-40 right-0 z-20">
+      <div class="bg-gradient-to-l from-black/55 via-black/28 to-transparent pr-4 pb-0 pl-12 pt-0 md:pr-8 md:pb-2 md:pl-20 md:pt-2">
+        <a
+          href="https://www.facebook.com/gabapix"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="block text-right font-display text-[10px] md:text-xs uppercase tracking-[0.25em] text-white/70 drop-shadow-md transition-colors duration-200 hover:text-white"
+          aria-label="Foto: Gabapix - profil Facebook"
+        >
+          foto: Gabapix
+        </a>
+      </div>
     </div>
 
     <!-- Scroll arrow -->

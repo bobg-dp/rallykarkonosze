@@ -25,6 +25,7 @@
         <p class="font-display font-bold uppercase text-rally-yellow text-xs tracking-widest mt-2 mb-1">Kibice</p>
         <RouterLink to="/kibice/mieszkancy" @click="$emit('close')" class="block py-2 px-3 font-display font-semibold uppercase text-sm text-white hover:text-rally-yellow transition-colors">Mieszkańcy</RouterLink>
         <RouterLink to="/kibice/informacje" @click="$emit('close')" class="block py-2 px-3 font-display font-semibold uppercase text-sm text-white hover:text-rally-yellow transition-colors">Przydatne informacje</RouterLink>
+        <RouterLink to="/kibice/bezpiecznie" @click="$emit('close')" class="block py-2 px-3 font-display font-semibold uppercase text-sm text-white hover:text-rally-yellow transition-colors">Kibicuj Bezpiecznie</RouterLink>
         <RouterLink to="/kibice/sklep" @click="$emit('close')" class="block py-2 px-3 font-display font-semibold uppercase text-sm text-white hover:text-rally-yellow transition-colors">Sklep</RouterLink>
       </div>
       <RouterLink to="/partnerzy" @click="$emit('close')" class="block py-2 font-display font-bold uppercase text-sm text-white hover:text-rally-yellow transition-colors border-t border-rally-gray">Partnerzy</RouterLink>

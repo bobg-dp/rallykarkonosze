@@ -1,20 +1,20 @@
 <template>
   <header
-    class="fixed top-0 left-0 right-0 z-50 flex flex-col"
+    class="fixed top-0 left-0 right-0 z-50 flex flex-col transition-[filter] duration-300"
     :class="scrolled ? 'shadow-lg' : ''"
   >
     <!-- Top bar -->
     <div
-      class="bg-white flex items-center justify-between px-4 md:px-8"
-      style="height: 90px; min-height: 90px;"
-      :style="{ height: isMobile ? '90px' : '125px', minHeight: isMobile ? '90px' : '125px' }"
+      class="bg-white flex items-center justify-between px-4 md:px-8 transition-[height,min-height,padding] duration-300"
+      :style="{ height: topBarHeight, minHeight: topBarHeight }"
     >
       <!-- Logo -->
       <RouterLink to="/" class="flex items-center group shrink-0" aria-label="AMG Rally Karkonosze – strona główna">
         <img
           src="/logo.png"
           alt="AMG Rally Karkonosze"
-          class="h-16 md:h-24 w-auto transition-transform duration-300 group-hover:scale-105"
+          class="w-auto transition-[height,transform] duration-300 group-hover:scale-105"
+          :class="isCompactHeader ? 'h-10 md:h-12' : 'h-16 md:h-24'"
         />
       </RouterLink>
 
@@ -106,17 +106,27 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted } from 'vue'
+import { computed, ref, onMounted, onUnmounted } from 'vue'
 import { RouterLink } from 'vue-router'
 import TheNav from './TheNav.vue'
 import MobileMenu from './MobileMenu.vue'
 
 const scrolled = ref(false)
+const isCompactHeader = ref(false)
 const mobileMenuOpen = ref(false)
 const isMobile = ref(false)
 
+const topBarHeight = computed(() => {
+  if (isMobile.value) {
+    return isCompactHeader.value ? '60px' : '90px'
+  }
+
+  return isCompactHeader.value ? '60px' : '125px'
+})
+
 function handleScroll() {
   scrolled.value = window.scrollY > 10
+  isCompactHeader.value = window.scrollY > 500
 }
 
 function handleResize() {
@@ -127,6 +137,7 @@ onMounted(() => {
   window.addEventListener('scroll', handleScroll, { passive: true })
   window.addEventListener('resize', handleResize, { passive: true })
   handleResize()
+  handleScroll()
 })
 
 onUnmounted(() => {

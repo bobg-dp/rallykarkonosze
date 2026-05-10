@@ -29,6 +29,7 @@
       </div>
 
       <ShortcutsSection />
+      <FansInfoSection />
       <PartnersSection />
       <OrganizersSection />
     </main>
@@ -41,6 +42,7 @@
 import TheHeader from '../components/layout/TheHeader.vue'
 import TheFooter from '../components/layout/TheFooter.vue'
 import HeroSection from '../components/sections/HeroSection.vue'
+import FansInfoSection from '../components/sections/FansInfoSection.vue'
 import NewsSection from '../components/sections/NewsSection.vue'
 import ShortcutsSection from '../components/sections/ShortcutsSection.vue'
 import PartnersSection from '../components/sections/PartnersSection.vue'

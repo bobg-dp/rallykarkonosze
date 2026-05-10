@@ -9,6 +9,7 @@ const router = createRouter({
     { path: '/zawodnicy-rsmds', name: 'drivers-rsmds', component: () => import('../views/DriversRSMDSView.vue') },
     { path: '/zawodnicy-rpp', name: 'drivers-rpp', component: () => import('../views/DriversRPPView.vue') },
     { path: '/kibice', name: 'fans', component: () => import('../views/FansView.vue') },
+    { path: '/kibice/bezpiecznie', name: 'fans-safety', component: () => import('../views/FansSafetyView.vue') },
     { path: '/partnerzy', name: 'partners', component: () => import('../views/PartnersView.vue') },
     { path: '/kontakt', name: 'contact', component: () => import('../views/ContactView.vue') },
   ],
