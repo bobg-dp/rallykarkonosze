@@ -41,7 +41,6 @@
               </div>
               <div>
                 <p class="font-display font-bold uppercase text-white text-base tracking-wide group-hover:text-rally-yellow transition-colors duration-200">Polski Związek Motorowy</p>
-                <p class="text-gray-400 text-sm">Organ nadzorujący</p>
               </div>
             </div>
           </div>

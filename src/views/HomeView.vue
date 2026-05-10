@@ -6,7 +6,28 @@
       <!-- Hero – fullscreen -->
       <HeroSection />
 
+      <!-- Przejście Hero -> Aktualności -->
+      <div class="relative z-10 -mb-px overflow-hidden bg-rally-black-deep bg-transparent bg-blend-multiply mt-[-200px]">
+        <img
+          src="/splash.png"
+          alt=""
+          aria-hidden="true"
+          class="block w-full h-auto"
+        />
+      </div>
+
       <NewsSection />
+
+      <!-- Przejście Aktualności -> Skróty -->
+      <div class="relative z-10 -my-px overflow-hidden bg-rally-black">
+        <img
+          src="/splash.png"
+          alt=""
+          aria-hidden="true"
+          class="block w-full h-auto rotate-180"
+        />
+      </div>
+
       <ShortcutsSection />
       <PartnersSection />
       <OrganizersSection />
