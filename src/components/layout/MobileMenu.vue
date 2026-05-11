@@ -17,16 +17,27 @@
         <p class="font-display font-bold uppercase text-rally-yellow text-xs tracking-widest mb-1">Informacje</p>
         <RouterLink to="/o-rajdzie" @click="$emit('close')" class="block py-2 px-3 font-display font-semibold uppercase text-sm text-white hover:text-rally-yellow transition-colors">O rajdzie</RouterLink>
         <RouterLink to="/aktualnosci" @click="$emit('close')" class="block py-2 px-3 font-display font-semibold uppercase text-sm text-white hover:text-rally-yellow transition-colors">Aktualności</RouterLink>
-        <RouterLink to="/lista-zgloszen" @click="$emit('close')" class="block py-2 px-3 font-display font-semibold uppercase text-sm text-white hover:text-rally-yellow transition-colors">Lista zgłoszeń</RouterLink>
       </div>
-      <RouterLink to="/zawodnicy-rsmds" @click="$emit('close')" class="block py-2 font-display font-bold uppercase text-sm text-white hover:text-rally-yellow transition-colors border-t border-rally-gray">Zawodnicy RSMDS</RouterLink>
-      <RouterLink to="/zawodnicy-rpp" @click="$emit('close')" class="block py-2 font-display font-bold uppercase text-sm text-white hover:text-rally-yellow transition-colors border-t border-rally-gray">Zawodnicy RPP</RouterLink>
+      <div class="border-t border-rally-gray pt-2">
+        <RouterLink to="/zawodnicy-rsmds" @click="$emit('close')" class="block py-2 font-display font-bold uppercase text-sm text-white hover:text-rally-yellow transition-colors">Zawodnicy RO</RouterLink>
+        <span class="block py-2 px-3 font-display font-semibold uppercase text-sm text-gray-500 cursor-not-allowed select-none">Elektroniczna Tablica Ogłoszeń</span>
+        <span class="block py-2 px-3 font-display font-semibold uppercase text-sm text-gray-500 cursor-not-allowed select-none">Dokumenty</span>
+        <span class="block py-2 px-3 font-display font-semibold uppercase text-sm text-gray-500 cursor-not-allowed select-none">Harmonogram</span>
+        <span class="block py-2 px-3 font-display font-semibold uppercase text-sm text-gray-500 cursor-not-allowed select-none">Lista Startowa</span>
+      </div>
+      <div class="border-t border-rally-gray pt-2">
+        <RouterLink to="/zawodnicy-rpp" @click="$emit('close')" class="block py-2 font-display font-bold uppercase text-sm text-white hover:text-rally-yellow transition-colors">Zawodnicy RS</RouterLink>
+        <span class="block py-2 px-3 font-display font-semibold uppercase text-sm text-gray-500 cursor-not-allowed select-none">Elektroniczna Tablica Ogłoszeń</span>
+        <span class="block py-2 px-3 font-display font-semibold uppercase text-sm text-gray-500 cursor-not-allowed select-none">Dokumenty</span>
+        <span class="block py-2 px-3 font-display font-semibold uppercase text-sm text-gray-500 cursor-not-allowed select-none">Harmonogram</span>
+        <span class="block py-2 px-3 font-display font-semibold uppercase text-sm text-gray-500 cursor-not-allowed select-none">Lista Startowa</span>
+      </div>
       <div class="border-t border-rally-gray">
         <p class="font-display font-bold uppercase text-rally-yellow text-xs tracking-widest mt-2 mb-1">Kibice</p>
-        <RouterLink to="/kibice/mieszkancy" @click="$emit('close')" class="block py-2 px-3 font-display font-semibold uppercase text-sm text-white hover:text-rally-yellow transition-colors">Mieszkańcy</RouterLink>
-        <RouterLink to="/kibice/informacje" @click="$emit('close')" class="block py-2 px-3 font-display font-semibold uppercase text-sm text-white hover:text-rally-yellow transition-colors">Przydatne informacje</RouterLink>
+        <span class="block py-2 px-3 font-display font-semibold uppercase text-sm text-gray-500 cursor-not-allowed select-none">Mieszkańcy</span>
+        <span class="block py-2 px-3 font-display font-semibold uppercase text-sm text-gray-500 cursor-not-allowed select-none">Przydatne informacje</span>
         <RouterLink to="/kibice/bezpiecznie" @click="$emit('close')" class="block py-2 px-3 font-display font-semibold uppercase text-sm text-white hover:text-rally-yellow transition-colors">Kibicuj Bezpiecznie</RouterLink>
-        <RouterLink to="/kibice/sklep" @click="$emit('close')" class="block py-2 px-3 font-display font-semibold uppercase text-sm text-white hover:text-rally-yellow transition-colors">Sklep</RouterLink>
+        <span class="block py-2 px-3 font-display font-semibold uppercase text-sm text-gray-500 cursor-not-allowed select-none">Sklep</span>
       </div>
       <RouterLink to="/partnerzy" @click="$emit('close')" class="block py-2 font-display font-bold uppercase text-sm text-white hover:text-rally-yellow transition-colors border-t border-rally-gray">Partnerzy</RouterLink>
       <RouterLink to="/kontakt" @click="$emit('close')" class="block py-2 font-display font-bold uppercase text-sm text-white hover:text-rally-yellow transition-colors border-t border-rally-gray">Kontakt</RouterLink>

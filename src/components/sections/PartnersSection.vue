@@ -24,8 +24,12 @@
           <p class="font-display font-bold uppercase tracking-widest text-rally-yellow text-xs mb-2">Sponsor Tytularny</p>
           <h3 class="font-display font-black uppercase text-rally-black text-2xl md:text-3xl mb-4">AMG - Sponsor Tytularny</h3>
           <p class="text-gray-600 leading-relaxed text-sm md:text-base">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            <span class="font-bold text-lg">Witam</span>  <br/>
+            AMG to nie tylko generalny wykonawca inwestycji ale również transport wypożyczalnia autolawet, busów, aut i maszyn budowlanych. Dlaczego wspieram rajd? Moją pasją zawsze był motorsport, sam jestem kierowcą rajdowym 😊, ale tak naprawdę moim planem jest wspierać młodych ambitnych zawodników, którzy mają talent i ambicje by startować i wygrywać w rajdach, ale często ogranicza ich brak budżetu bo to nie tani sport. <br/>
+            Wspieram rajd dlatego że Karkonosze cały czas stały rajdami i świetnie,że mogę być częścią tego projektu i zapisać się w kartach historii motosportu jako osoba która pomogła w reaktywowaniu Rajdu Karkonoskiego. <br/>
+            <br/>
           </p>
+          <p class="text-rally-black leading-relaxed text-base md:text-lg text-right font-display font-bold italic">Pozdrawiam Gracjan Niemczyk</p>
         </div>
       </div>
 
