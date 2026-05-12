@@ -3,17 +3,19 @@
     <TheHeader />
 
     <main>
-      <!-- Hero – fullscreen -->
-      <HeroSection />
+      <div class="relative">
+        <!-- Hero – fullscreen -->
+        <HeroSection />
 
-      <!-- Przejście Hero -> Aktualności -->
-      <div class="relative z-10 -mb-px overflow-hidden bg-rally-black-deep bg-transparent bg-blend-multiply mt-[-200px]">
-        <img
-          src="/splash.png"
-          alt=""
-          aria-hidden="true"
-          class="block w-full h-auto"
-        />
+        <!-- Przejście Hero -> Aktualności -->
+        <div class="pointer-events-none absolute left-0 right-0 bottom-0 z-30  overflow-hidden bg-rally-black-deep bg-transparent bg-blend-multiply">
+          <img
+            src="/splash.png"
+            alt=""
+            aria-hidden="true"
+            class="block w-full h-auto"
+          />
+        </div>
       </div>
 
       <NewsSection />

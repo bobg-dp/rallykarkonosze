@@ -1,1 +1,4 @@
 node_modules
+dist
+public/assets/cycles/.DS_Store
+.DS_Store
