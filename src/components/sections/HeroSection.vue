@@ -58,14 +58,32 @@
           </p>
         </div>
 
-        <!-- Badges rangi -->
-        <div ref="badgesRef" class="mt-5 flex flex-col sm:flex-row items-center md:items-start gap-3 opacity-0">
-          <span class="bg-rally-yellow text-rally-black font-display font-bold uppercase text-xs md:text-sm px-4 py-2 tracking-wider">
-            Runda RSMDS
-          </span>
-          <span class="border border-white text-white font-display font-bold uppercase text-xs md:text-sm px-4 py-2 tracking-wider">
-            Runda Mistrzostw Południa
-          </span>
+        <!-- Logotypy cykli -->
+        <div ref="badgesRef" class="mt-5 flex flex-col sm:flex-row items-center md:items-start gap-3 md:gap-4 opacity-0">
+          <div class="flex items-center justify-center w-36 h-14 md:w-40 md:h-16">
+            <img
+              src="/assets/cycles/rsmds.webp"
+              alt="Rajdowe Samochodowe Mistrzostwa Dolnego Śląska"
+              class="h-11 md:h-14 w-auto object-contain drop-shadow-lg"
+              loading="lazy"
+            />
+          </div>
+          <div class="flex items-center justify-center w-36 h-14 md:w-40 md:h-16">
+            <img
+              src="/assets/cycles/rpp-transparent.webp"
+              alt="Rajdowy Puchar Południa"
+              class="h-10 md:h-12 w-auto object-contain drop-shadow-lg"
+              loading="lazy"
+            />
+          </div>
+          <div class="flex items-center justify-center w-36 h-14 md:w-40 md:h-16">
+            <img
+              src="/assets/cycles/rmp-white.webp"
+              alt="Rajdowe Mistrzostwa Południa"
+              class="h-10 md:h-12 w-auto object-contain drop-shadow-lg"
+              loading="lazy"
+            />
+          </div>
         </div>
       </div>
     </div>

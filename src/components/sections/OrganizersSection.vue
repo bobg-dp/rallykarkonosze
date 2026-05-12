@@ -31,7 +31,7 @@
 
             <!-- PZM -->
             <div class="flex items-center gap-5 group">
-              <div class="shrink-0 w-20 h-20 rounded-full bg-white flex items-center justify-center overflow-hidden p-2 shadow-lg">
+              <div class="shrink-0 w-20 h-20 rounded-full bg-[#fff005] flex items-center justify-center overflow-hidden p-2 shadow-lg">
                 <img
                   src="/assets/pzm.webp"
                   alt="Polski Związek Motorowy"
@@ -52,33 +52,49 @@
           <div class="flex flex-col gap-6">
             <!-- RMP -->
             <div class="flex items-center gap-5 group">
-              <div class="shrink-0 w-20 h-20 rounded-full bg-white flex items-center justify-center overflow-hidden p-2 shadow-lg">
+              <div class="shrink-0 w-28 h-16 md:w-32 md:h-18 flex items-center justify-center p-2">
                 <img
-                  src="/assets/rmp.jpg"
+                  src="/assets/cycles/rmp-white.webp"
                   alt="Rajdowe Mistrzostwa Południa"
                   class="w-full h-full object-contain"
                   loading="lazy"
                 />
               </div>
               <div>
-                <p class="font-display font-bold uppercase text-white text-base tracking-wide group-hover:text-rally-yellow transition-colors duration-200">Rajdowe Mistrzostwa Południa</p>
-                <p class="text-gray-400 text-sm">Rally Sprint</p>
+                <p class="font-display font-bold uppercase text-white text-base tracking-wide group-hover:text-rally-yellow transition-colors duration-200">RMP</p>
+                <p class="text-gray-400 text-sm">Rajd Okręgowy</p>
               </div>
             </div>
 
             <!-- RSMDS -->
             <div class="flex items-center gap-5 group">
-              <div class="shrink-0 w-20 h-20 rounded-full bg-white flex items-center justify-center overflow-hidden p-2 shadow-lg">
+              <div class="shrink-0 w-28 h-16 md:w-32 md:h-18 flex items-center justify-center p-2">
                 <img
-                  src="/assets/rsmds.jpg"
+                  src="/assets/cycles/rsmds.webp"
                   alt="Rajdowe Samochodowe Mistrzostwa Dolnego Śląska"
                   class="w-full h-full object-contain"
                   loading="lazy"
                 />
               </div>
               <div>
-                <p class="font-display font-bold uppercase text-white text-base tracking-wide group-hover:text-rally-yellow transition-colors duration-200">Rajdowe Samochodowe Mistrzostwa Dolnego Śląska</p>
-                <p class="text-gray-400 text-sm">Runda Okręgowa</p>
+                <p class="font-display font-bold uppercase text-white text-base tracking-wide group-hover:text-rally-yellow transition-colors duration-200">RSMDS</p>
+                <p class="text-gray-400 text-sm">Rajd Okręgowy</p>
+              </div>
+            </div>
+
+            <!-- RPP -->
+            <div class="flex items-center gap-5 group">
+              <div class="shrink-0 w-28 h-16 md:w-32 md:h-18 flex items-center justify-center p-2">
+                <img
+                  src="/assets/cycles/rpp-transparent.webp"
+                  alt="Rajdowy Puchar Południa"
+                  class="w-full h-full object-contain"
+                  loading="lazy"
+                />
+              </div>
+              <div>
+                <p class="font-display font-bold uppercase text-white text-base tracking-wide group-hover:text-rally-yellow transition-colors duration-200">RPP</p>
+                <p class="text-gray-400 text-sm">Rally Sprint</p>
               </div>
             </div>
           </div>

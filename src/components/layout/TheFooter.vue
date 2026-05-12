@@ -15,9 +15,10 @@
         <div>
           <h3 class="font-display font-bold uppercase text-rally-yellow tracking-wider text-sm mb-4">Nawigacja</h3>
           <ul class="space-y-2">
+            <li><RouterLink to="/o-rajdzie" class="text-gray-400 hover:text-white text-sm transition-colors">O rajdzie</RouterLink></li>
             <li><RouterLink to="/aktualnosci" class="text-gray-400 hover:text-white text-sm transition-colors">Aktualności</RouterLink></li>
-            <li><RouterLink to="/zawodnicy-rsmds" class="text-gray-400 hover:text-white text-sm transition-colors">Zawodnicy RSMDS</RouterLink></li>
-            <li><RouterLink to="/zawodnicy-rpp" class="text-gray-400 hover:text-white text-sm transition-colors">Zawodnicy RPP</RouterLink></li>
+            <li><RouterLink to="/zawodnicy-rsmds" class="text-gray-400 hover:text-white text-sm transition-colors">Zawodnicy RO</RouterLink></li>
+            <li><RouterLink to="/zawodnicy-rpp" class="text-gray-400 hover:text-white text-sm transition-colors">Zawodnicy RS</RouterLink></li>
             <li><RouterLink to="/partnerzy" class="text-gray-400 hover:text-white text-sm transition-colors">Partnerzy</RouterLink></li>
             <li><RouterLink to="/kontakt" class="text-gray-400 hover:text-white text-sm transition-colors">Kontakt</RouterLink></li>
           </ul>
