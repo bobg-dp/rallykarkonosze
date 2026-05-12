@@ -8,7 +8,7 @@
         <HeroSection />
 
         <!-- Przejście Hero -> Aktualności -->
-        <div class="pointer-events-none absolute left-0 right-0 bottom-0 z-30  overflow-hidden bg-rally-black-deep bg-transparent bg-blend-multiply">
+        <div class="pointer-events-none absolute left-0 right-0 bottom-0 z-30 overflow-hidden bg-rally-black-deep bg-transparent bg-blend-multiply">
           <img
             src="/splash.png"
             alt=""
