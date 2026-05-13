@@ -136,10 +136,29 @@ const partners = [
     href: 'https://www.facebook.com/piekarniastankiewicz',
     linkTitle: 'Piekarnie-Cukiernie Stankiewicz i S-ka',
   },
-  { name: 'Logo Prosiak', logo: '/assets/sponsors/LogoProsiak.png' },
-  { name: 'Logo Z napisem od Piotra Rogaty', logo: '/assets/sponsors/LogoZnapisemodPiotraRogaty2.png' },
-  { name: 'Divemed Apartamenty', logo: '/assets/sponsors/divemed-apartamenty.png' },
-  { name: 'Osada Śnieżka', logo: '/assets/sponsors/logo-osada-sniezka-color.svg' },
+  {
+    name: 'Pod Tłustym Prosiakiem',
+    logo: '/assets/sponsors/LogoProsiak.png',
+    href: 'https://www.facebook.com/podtlustymprosiakiem/',
+    linkTitle: 'Pod Tłustym Prosiakiem',
+  },
+  {
+    name: 'Szara Willa & Pod Rogatym Wołem "u Ksawerego"',
+    logo: '/assets/sponsors/LogoPodROgatymWolem.png',
+    href: 'https://www.facebook.com/szarawilla21c/',
+    linkTitle: 'Szara Willa & Pod Rogatym Wołem "u Ksawerego"',
+  },
+  { name: 'Divemed Apartamenty', 
+  logo: '/assets/sponsors/divemed-apartamenty.png',
+  href: 'https://divemed.eu/apartamenty-do-wynajecia/',
+  linkTitle: 'Divemed Apartamenty',
+  },
+  {
+    name: 'Osada Śnieżka',
+    logo: '/assets/sponsors/logo-osada-sniezka-color.svg',
+    href: 'https://www.osada-sniezka.pl/',
+    linkTitle: 'Osada Śnieżka',
+  },
 ]
 
 const municipalPartners = [
@@ -158,7 +177,7 @@ const municipalPartners = [
 ]
 
 const mediaPatrons = [
-  { name: 'Kalendarz motoryzacyjny', logo: '/assets/sponsors/media/kalendarz-motoryzacyjny.png' },
+  { name: 'Kalendarz motoryzacyjny', logo: '/assets/sponsors/media/kalendarz-motoryzacyjny.png', href: 'https://kalendarz-motoryzacyjny.pl/', linkTitle: 'Największa baza wydarzeń samochodowych' },
   {
     name: 'Radio Eska',
     logo: '/assets/sponsors/media/eska.webp',
