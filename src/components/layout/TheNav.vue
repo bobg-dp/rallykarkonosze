@@ -21,7 +21,7 @@
         <!-- Zawodnicy RO -->
         <li class="relative h-full flex items-center group">
           <RouterLink
-            to="/zawodnicy-rsmds"
+            to="/zawodnicy-ro"
             class="font-display font-semibold uppercase tracking-wider text-sm text-white px-4 h-full flex items-center gap-1 hover:text-rally-yellow transition-colors duration-200"
           >
             Zawodnicy RO
@@ -40,7 +40,7 @@
         <!-- Zawodnicy RS -->
         <li class="relative h-full flex items-center group">
           <RouterLink
-            to="/zawodnicy-rpp"
+            to="/zawodnicy-rs"
             class="font-display font-semibold uppercase tracking-wider text-sm text-white px-4 h-full flex items-center gap-1 hover:text-rally-yellow transition-colors duration-200"
           >
             Zawodnicy RS

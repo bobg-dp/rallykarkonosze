@@ -19,14 +19,14 @@
         <RouterLink to="/aktualnosci" @click="$emit('close')" class="block py-2 px-3 font-display font-semibold uppercase text-sm text-white hover:text-rally-yellow transition-colors">Aktualności</RouterLink>
       </div>
       <div class="border-t border-rally-gray pt-2">
-        <RouterLink to="/zawodnicy-rsmds" @click="$emit('close')" class="block py-2 font-display font-bold uppercase text-sm text-white hover:text-rally-yellow transition-colors">Zawodnicy RO</RouterLink>
+        <RouterLink to="/zawodnicy-ro" @click="$emit('close')" class="block py-2 font-display font-bold uppercase text-sm text-white hover:text-rally-yellow transition-colors">Zawodnicy RO</RouterLink>
         <span class="block py-2 px-3 font-display font-semibold uppercase text-sm text-gray-500 cursor-not-allowed select-none">Elektroniczna Tablica Ogłoszeń</span>
         <span class="block py-2 px-3 font-display font-semibold uppercase text-sm text-gray-500 cursor-not-allowed select-none">Dokumenty</span>
         <span class="block py-2 px-3 font-display font-semibold uppercase text-sm text-gray-500 cursor-not-allowed select-none">Harmonogram</span>
         <span class="block py-2 px-3 font-display font-semibold uppercase text-sm text-gray-500 cursor-not-allowed select-none">Lista Startowa</span>
       </div>
       <div class="border-t border-rally-gray pt-2">
-        <RouterLink to="/zawodnicy-rpp" @click="$emit('close')" class="block py-2 font-display font-bold uppercase text-sm text-white hover:text-rally-yellow transition-colors">Zawodnicy RS</RouterLink>
+        <RouterLink to="/zawodnicy-rs" @click="$emit('close')" class="block py-2 font-display font-bold uppercase text-sm text-white hover:text-rally-yellow transition-colors">Zawodnicy RS</RouterLink>
         <span class="block py-2 px-3 font-display font-semibold uppercase text-sm text-gray-500 cursor-not-allowed select-none">Elektroniczna Tablica Ogłoszeń</span>
         <span class="block py-2 px-3 font-display font-semibold uppercase text-sm text-gray-500 cursor-not-allowed select-none">Dokumenty</span>
         <span class="block py-2 px-3 font-display font-semibold uppercase text-sm text-gray-500 cursor-not-allowed select-none">Harmonogram</span>

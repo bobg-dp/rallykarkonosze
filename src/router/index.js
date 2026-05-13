@@ -16,14 +16,14 @@ const router = createRouter({
       component: () => import("../views/NewsView.vue"),
     },
     {
-      path: "/zawodnicy-rsmds",
-      name: "drivers-rsmds",
-      component: () => import("../views/DriversRSMDSView.vue"),
+      path: "/zawodnicy-ro",
+      name: "drivers-ro",
+      component: () => import("../views/DriversROView.vue"),
     },
     {
-      path: "/zawodnicy-rpp",
-      name: "drivers-rpp",
-      component: () => import("../views/DriversRPPView.vue"),
+      path: "/zawodnicy-rs",
+      name: "drivers-rs",
+      component: () => import("../views/DriversRSView.vue"),
     },
     {
       path: "/kibice",

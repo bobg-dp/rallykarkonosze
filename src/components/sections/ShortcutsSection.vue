@@ -24,10 +24,30 @@ import ShortcutCard from '../ui/ShortcutCard.vue'
 
 const shortcuts = [
   {
-    label: 'Zawodnicy',
-    desc: 'Listy zgłoszeń, wyniki, klasyfikacje',
-    to: '/zawodnicy-rsmds',
-    icon: 'steering',
+    label: 'Zawodnicy RO',
+    desc: 'Listy zgłoszeń, wyniki i klasyfikacje Rajdu Okręgowego',
+    to: '/zawodnicy-ro',
+    logos: [
+      {
+        src: '/assets/cycles/rsmds.webp',
+        alt: 'Rajdowe Samochodowe Mistrzostwa Dolnego Śląska',
+      },
+      {
+        src: '/assets/cycles/rmp-white.webp',
+        alt: 'Rajdowe Mistrzostwa Południa',
+      },
+    ],
+  },
+  {
+    label: 'Zawodnicy RS',
+    desc: 'Listy zgłoszeń, wyniki i klasyfikacje Rally Sprint',
+    to: '/zawodnicy-rs',
+    logos: [
+      {
+        src: '/assets/cycles/rpp-transparent.webp',
+        alt: 'Rajdowy Puchar Południa',
+      },
+    ],
   },
   {
     label: 'Dla kibiców',
@@ -43,7 +63,7 @@ const shortcuts = [
   },
   {
     label: 'Program rajdu',
-    desc: 'Harmonogram, godziny startów, ceremonje',
+    desc: 'Harmonogram, godziny startów, ceremonie',
     to: '/program',
     icon: 'calendar',
   },
@@ -52,12 +72,6 @@ const shortcuts = [
     desc: 'Trasy OS, mapy dojazdowe, parki serwisowe',
     to: '/mapy',
     icon: 'map',
-  },
-  {
-    label: 'Partnerzy',
-    desc: 'Sponsorzy i patroni AMG Rally Karkonosze',
-    to: '/partnerzy',
-    icon: 'star',
   },
 ]
 </script>

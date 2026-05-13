@@ -3,8 +3,29 @@
     :to="item.to"
     class="group flex flex-col items-center text-center p-8 border border-rally-gray hover:border-rally-yellow hover:bg-rally-gray transition-all duration-300 cursor-pointer"
   >
-    <!-- Ikona -->
-    <div class="w-16 h-16 mb-5 flex items-center justify-center text-rally-yellow group-hover:scale-110 transition-transform duration-300">
+    <!-- Ikona / logotypy -->
+    <div
+      v-if="item.logos?.length"
+      class="mb-5 flex flex-wrap items-center justify-center gap-3 md:gap-4 min-h-20"
+    >
+      <div
+        v-for="logo in item.logos"
+        :key="logo.src"
+        class="flex items-center justify-center w-20 h-12 md:w-24 md:h-14 group-hover:scale-105 transition-transform duration-300"
+      >
+        <img
+          :src="logo.src"
+          :alt="logo.alt"
+          class="max-w-full max-h-full object-contain drop-shadow-lg"
+          loading="lazy"
+        />
+      </div>
+    </div>
+
+    <div
+      v-else
+      class="w-16 h-16 mb-5 flex items-center justify-center text-rally-yellow group-hover:scale-110 transition-transform duration-300"
+    >
       <component :is="iconComponents[item.icon]" class="w-full h-full" />
     </div>
 

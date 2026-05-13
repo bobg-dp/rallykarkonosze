@@ -17,8 +17,8 @@
           <ul class="space-y-2">
             <li><RouterLink to="/o-rajdzie" class="text-gray-400 hover:text-white text-sm transition-colors">O rajdzie</RouterLink></li>
             <li><RouterLink to="/aktualnosci" class="text-gray-400 hover:text-white text-sm transition-colors">Aktualności</RouterLink></li>
-            <li><RouterLink to="/zawodnicy-rsmds" class="text-gray-400 hover:text-white text-sm transition-colors">Zawodnicy RO</RouterLink></li>
-            <li><RouterLink to="/zawodnicy-rpp" class="text-gray-400 hover:text-white text-sm transition-colors">Zawodnicy RS</RouterLink></li>
+            <li><RouterLink to="/zawodnicy-ro" class="text-gray-400 hover:text-white text-sm transition-colors">Zawodnicy RO</RouterLink></li>
+            <li><RouterLink to="/zawodnicy-rs" class="text-gray-400 hover:text-white text-sm transition-colors">Zawodnicy RS</RouterLink></li>
             <li><RouterLink to="/partnerzy" class="text-gray-400 hover:text-white text-sm transition-colors">Partnerzy</RouterLink></li>
             <li><RouterLink to="/kontakt" class="text-gray-400 hover:text-white text-sm transition-colors">Kontakt</RouterLink></li>
           </ul>
