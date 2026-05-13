@@ -1,11 +1,11 @@
 <template>
-  <section class="relative overflow-hidden bg-rally-black-deep py-16 md:py-20">
+  <section class="relative overflow-hidden bg-white py-16 md:py-20">
     <div
-      class="absolute -left-24 top-10 h-64 w-64 rounded-full bg-rally-yellow/10 blur-3xl"
+      class="absolute -left-24 top-10 h-64 w-64 rounded-full bg-rally-black/6 blur-3xl"
       aria-hidden="true"
     ></div>
     <div
-      class="absolute right-0 bottom-0 h-56 w-56 translate-x-1/3 translate-y-1/4 rounded-full bg-white/5 blur-3xl"
+      class="absolute right-0 bottom-0 h-56 w-56 translate-x-1/3 translate-y-1/4 rounded-full bg-rally-black/4 blur-3xl"
       aria-hidden="true"
     ></div>
 
@@ -14,10 +14,10 @@
     >
       <div class="order-1">
         <div
-          class="relative overflow-hidden rounded-[2rem] border border-white/10 bg-black/40 p-5 shadow-[0_24px_80px_rgba(0,0,0,0.35)] backdrop-blur-sm md:p-7"
+          class="relative overflow-hidden rounded-[2rem] border border-black/8 bg-[#f5f4f1] p-5 shadow-[0_24px_80px_rgba(0,0,0,0.12)] md:p-7"
         >
           <div
-            class="absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-rally-yellow/15 to-transparent"
+            class="absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-rally-black/5 to-transparent"
             aria-hidden="true"
           ></div>
           <img
@@ -31,21 +31,21 @@
 
       <div class="order-2">
         <p
-          class="mb-3 font-display text-sm font-bold uppercase tracking-[0.3em] text-rally-yellow/80"
+          class="mb-3 font-display text-sm font-bold uppercase tracking-[0.3em] text-zinc-500"
         >
           Kilka słów od dyrektora
         </p>
 
         <h2
-          class="max-w-3xl font-display text-4xl font-black uppercase leading-none text-white md:text-6xl"
+          class="max-w-3xl font-display text-4xl font-black uppercase leading-none text-zinc-900 md:text-6xl"
         >
           Rajdy wracają do Karkonoszy!
         </h2>
 
         <blockquote
-          class="mt-8 space-y-5 text-base leading-7 text-white/82 md:text-[1.05rem] md:leading-8"
+          class="mt-8 space-y-5 border-l border-zinc-200 pl-5 text-base leading-7 text-zinc-600 md:text-[1.05rem] md:leading-8 md:pl-6"
         >
-          <p>
+          <p class="text-zinc-700">
             Drodzy Zawodnicy, Kibice, Przyjaciele Sportów Motorowych! Z ogromną
             dumą i wzruszeniem witam Was na trasach AMG Rally Karkonosze. Po
             latach przerwy rajdowa impreza wraca do Kotliny Jeleniogórskiej. Dla
@@ -54,7 +54,7 @@
             polskiego motorsportu.
           </p>
 
-          <p>
+          <p class="text-zinc-600">
             Droga do reaktywacji rajdów w regionie wymagała przejścia długiego i
             wymagającego odcinka. Zaczynaliśmy od podstaw, organizując mniejsze
             imprezy typu KJS. To właśnie tam na nowo obudziliśmy rajdowego ducha
@@ -68,34 +68,34 @@
             potrafi łączyć ludzi i budować silne relacje w regionie.
           </p>
 
-          <p>
+          <p class="text-zinc-500">
             Przed nami weekend pełen sportowych emocji. Dla zawodników
             przygotowaliśmy wymagające, legendarne odcinki specjalne, a dla
             kibiców - bezpieczne i niezapomniane widowisko. Zapraszam na
             niezapomniany prolog na Zabobrzu, doskonale znany kibicom rajdowym.
           </p>
 
-          <p>
+          <p class="text-zinc-600">
             Dla nas, organizatorów, najbliższe dni to przede wszystkim
             zwieńczenie wielu miesięcy tytanicznej pracy. Cały sztab ludzi
             pracował bez wytchnienia, aby dopiąć wszystko na ostatni guzik.
             Wyczekiwany start będzie najlepszą nagrodą za ten trud.
           </p>
 
-          <p>
+          <p class="text-zinc-700">
             Życzę zawodnikom powodzenia i czystej walki z czasem, a kibicom
             bezpiecznych wrażeń.
           </p>
         </blockquote>
 
-        <div class="mt-8 border-t border-white/10 pt-6">
+        <div class="mt-8 border-t border-zinc-200 pt-6">
           <p
-            class="font-display text-xs font-bold uppercase tracking-[0.26em] text-white/45 md:text-sm"
+            class="font-display text-xs font-bold uppercase tracking-[0.26em] text-zinc-400 md:text-sm"
           >
             Dyrektor rajdu AMG Rally Karkonosze
           </p>
           <p
-            class="font-signature mt-3 text-4xl leading-none text-rally-yellow md:text-5xl"
+            class="font-signature mt-3 text-4xl leading-none text-zinc-700 md:text-5xl"
           >
             Adam Patron
           </p>
