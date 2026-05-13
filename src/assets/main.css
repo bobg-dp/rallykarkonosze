@@ -9,6 +9,7 @@
 
   --font-family-display: 'Barlow Condensed', ui-sans-serif, system-ui, sans-serif;
   --font-family-body: 'Barlow', ui-sans-serif, system-ui, sans-serif;
+  --font-family-signature: 'Great Vibes', 'Brush Script MT', cursive;
 }
 
 * {
@@ -30,4 +31,8 @@ body {
 
 .font-display {
   font-family: var(--font-family-display);
+}
+
+.font-signature {
+  font-family: var(--font-family-signature);
 }
