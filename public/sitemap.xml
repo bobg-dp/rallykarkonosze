@@ -20,12 +20,6 @@
   </url>
 
   <url>
-    <loc>https://rallykarkonosze.pl/aktualnosci/1</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
     <loc>https://rallykarkonosze.pl/zawodnicy-ro</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -89,6 +83,13 @@
     <loc>https://rallykarkonosze.pl/kontakt</loc>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://rallykarkonosze.pl/aktualnosci/otwarto-zapisy-na-amg-rally-karkonosze-2026</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
 
 </urlset>

@@ -17,7 +17,5 @@
 import TheHeader from '../components/layout/TheHeader.vue'
 import TheFooter from '../components/layout/TheFooter.vue'
 import NewsCard from '../components/ui/NewsCard.vue'
-
-const allNews = [
-  { id: 1, title: 'Otwarto zapisy na AMG Rally Karkonosze 2026', excerpt: 'Z przyjemnością informujemy, że ruszyły oficjalne zapisy dla zawodników na pierwszą rundę RSMDS.', date: '18 maja 2026', category: 'Zapisy', url: '/aktualnosci/1', image: '/assets/news/news1.webp' }]
+import { allNews } from '../data/news.js'
 </script>

@@ -28,16 +28,7 @@
 <script setup>
 import { RouterLink } from 'vue-router'
 import NewsCard from '../ui/NewsCard.vue'
+import { getLatestNews } from '../../data/news.js'
 
-const latestNews = [
-  {
-    id: 1,
-    title: 'Otwarto zapisy na AMG Rally Karkonosze 2026',
-    excerpt: 'Z przyjemnością informujemy, że ruszyły oficjalne zapisy dla zawodników na pierwszą rundę Rajdowych Samochodowych Mistrzostw Dolnego Śląska.',
-    date: '18 maja 2026',
-    category: 'Zapisy',
-    url: '/aktualnosci/1',
-    image: '/assets/news/news1.webp',
-  },
-]
+const latestNews = getLatestNews()
 </script>
