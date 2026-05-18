@@ -37,6 +37,20 @@
 
       <div class="border-t border-rally-gray pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
         <p class="text-gray-500 text-xs">© 2026 AMG Rally Karkonosze. Wszelkie prawa zastrzeżone.</p>
+        <a
+          href="https://driftingpixel.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="flex items-center gap-2 text-gray-500 hover:text-white transition-colors text-xs"
+        >
+          <span>Projekt i realizacja:</span>
+          <img
+            src="https://driftingpixel.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo-small.1d923798.png&w=128&q=75"
+            alt="DriftingPixel"
+            class="h-5 w-auto opacity-60 hover:opacity-100 transition-opacity"
+          />
+          <span class="font-semibold">DriftingPixel.com</span>
+        </a>
         <div class="flex items-center gap-4">
           <a :href="FACEBOOK_URL" target="_blank" rel="noopener noreferrer" class="text-gray-500 hover:text-rally-yellow transition-colors" aria-label="Facebook">
             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073C24 5.40548 18.627 0 12 0S0 5.40548 0 12.073C0 18.0994 4.38825 23.0943 10.125 24v-8.437H7.078v-3.49h3.047V9.413c0-3.025 1.791-4.697 4.533-4.697 1.312 0 2.686.235 2.686.235v2.97h-1.513c-1.491 0-1.956.93-1.956 1.886v2.267h3.328l-.532 3.49h-2.796V24C19.612 23.0943 24 18.0994 24 12.073z"/></svg>

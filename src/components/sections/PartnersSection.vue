@@ -177,7 +177,7 @@ const municipalPartners = [
 ]
 
 const mediaPatrons = [
-  { name: 'Kalendarz motoryzacyjny', logo: '/assets/sponsors/media/kalendarz-motoryzacyjny.png', href: 'https://kalendarz-motoryzacyjny.pl/', linkTitle: 'Największa baza wydarzeń samochodowych' },
+  { name: 'Kalendarz motoryzacyjny', logo: '/assets/sponsors/media/kalendarz.webp', href: 'https://kalendarz-motoryzacyjny.pl/', linkTitle: 'Największa baza wydarzeń samochodowych' },
   {
     name: 'Radio Eska',
     logo: '/assets/sponsors/media/eska.webp',
