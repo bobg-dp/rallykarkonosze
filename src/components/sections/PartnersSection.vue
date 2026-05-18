@@ -58,7 +58,7 @@
       <!-- Patroni medialni -->
       <div>
         <h3 class="font-display font-bold uppercase tracking-widest text-rally-black text-sm mb-6 text-center opacity-50">Patroni medialni</h3>
-        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6 lg:gap-16">
           <PartnerLogo v-for="item in mediaPatrons" :key="item.name" :label="item.name" :logo="item.logo" :href="item.href" :link-title="item.linkTitle" />
         </div>
       </div>
@@ -107,6 +107,12 @@ const partners = [
     linkTitle: 'Pasaż Górski Twój punkt na mapie Jeleniej Góry. Blisko, wygodnie, po sąsiedzku. Z E.Leclerc w sercu pasażu!',
   },
   {
+    name: 'Nowy Rynek Jelenia Góra',
+    logo: '/assets/sponsors/nowyrynek.webp',
+    href: 'https://www.nowy-rynek.com/',
+    linkTitle: 'Nowy Rynek Jelenia Góra',
+  },
+  {
     name: 'Auto Spa Kaczus',
     logo: '/assets/sponsors/kaczus.jpg',
     href: 'https://www.facebook.com/AutoSpaKaczuS/',
@@ -152,13 +158,8 @@ const partners = [
   logo: '/assets/sponsors/divemed-apartamenty.png',
   href: 'https://divemed.eu/apartamenty-do-wynajecia/',
   linkTitle: 'Divemed Apartamenty',
-  },
-  {
-    name: 'Osada Śnieżka',
-    logo: '/assets/sponsors/logo-osada-sniezka-color.svg',
-    href: 'https://www.osada-sniezka.pl/',
-    linkTitle: 'Osada Śnieżka',
-  },
+  }
+  
 ]
 
 const municipalPartners = [
@@ -189,6 +190,12 @@ const mediaPatrons = [
     logo: '/assets/sponsors/media/eska2.webp',
     href: 'https://player2.eska.pl/',
     linkTitle: 'Radio Eska2',
+  },
+  {
+    name: 'Motowizja',
+    logo: '/assets/sponsors/media/motowizja.webp',
+    href: 'https://motowizja.pl/',
+    linkTitle: 'Motowizja',
   },
   {
     name: 'Telewizja Dami',
