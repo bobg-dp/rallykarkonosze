@@ -31,8 +31,9 @@
           </RouterLink>
           <div class="absolute top-full left-0 bg-white shadow-xl min-w-72 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 translate-y-1 group-hover:translate-y-0 z-50">
             <span class="block px-5 py-3 font-display font-semibold uppercase text-sm text-gray-400 border-b border-gray-100 cursor-not-allowed select-none">Elektroniczna Tablica Ogłoszeń</span>
-            <span class="block px-5 py-3 font-display font-semibold uppercase text-sm text-gray-400 border-b border-gray-100 cursor-not-allowed select-none">Dokumenty</span>
-            <span class="block px-5 py-3 font-display font-semibold uppercase text-sm text-gray-400 border-b border-gray-100 cursor-not-allowed select-none">Harmonogram</span>
+            <RouterLink to="/zawodnicy-ro/dokumenty" class="block px-5 py-3 font-display font-semibold uppercase text-sm text-rally-black hover:bg-rally-yellow hover:text-rally-black transition-colors duration-150 border-b border-gray-100">Dokumenty</RouterLink>
+            <RouterLink to="/zawodnicy-ro/harmonogram" class="block px-5 py-3 font-display font-semibold uppercase text-sm text-rally-black hover:bg-rally-yellow hover:text-rally-black transition-colors duration-150 border-b border-gray-100">Harmonogram</RouterLink>
+            <RouterLink to="/lokalizacje" class="block px-5 py-3 font-display font-semibold uppercase text-sm text-rally-black hover:bg-rally-yellow hover:text-rally-black transition-colors duration-150 border-b border-gray-100">Lokalizacje</RouterLink>
             <span class="block px-5 py-3 font-display font-semibold uppercase text-sm text-gray-400 cursor-not-allowed select-none">Lista Startowa</span>
           </div>
         </li>
@@ -50,8 +51,9 @@
           </RouterLink>
           <div class="absolute top-full left-0 bg-white shadow-xl min-w-72 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 translate-y-1 group-hover:translate-y-0 z-50">
             <span class="block px-5 py-3 font-display font-semibold uppercase text-sm text-gray-400 border-b border-gray-100 cursor-not-allowed select-none">Elektroniczna Tablica Ogłoszeń</span>
-            <span class="block px-5 py-3 font-display font-semibold uppercase text-sm text-gray-400 border-b border-gray-100 cursor-not-allowed select-none">Dokumenty</span>
-            <span class="block px-5 py-3 font-display font-semibold uppercase text-sm text-gray-400 border-b border-gray-100 cursor-not-allowed select-none">Harmonogram</span>
+            <RouterLink to="/zawodnicy-rs/dokumenty" class="block px-5 py-3 font-display font-semibold uppercase text-sm text-rally-black hover:bg-rally-yellow hover:text-rally-black transition-colors duration-150 border-b border-gray-100">Dokumenty</RouterLink>
+            <RouterLink to="/zawodnicy-rs/harmonogram" class="block px-5 py-3 font-display font-semibold uppercase text-sm text-rally-black hover:bg-rally-yellow hover:text-rally-black transition-colors duration-150 border-b border-gray-100">Harmonogram</RouterLink>
+            <RouterLink to="/lokalizacje" class="block px-5 py-3 font-display font-semibold uppercase text-sm text-rally-black hover:bg-rally-yellow hover:text-rally-black transition-colors duration-150 border-b border-gray-100">Lokalizacje</RouterLink>
             <span class="block px-5 py-3 font-display font-semibold uppercase text-sm text-gray-400 cursor-not-allowed select-none">Lista Startowa</span>
           </div>
         </li>
@@ -68,8 +70,8 @@
           </button>
           <div class="absolute top-full left-0 bg-white shadow-xl min-w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 translate-y-1 group-hover:translate-y-0 z-50">
             <span class="block px-5 py-3 font-display font-semibold uppercase text-sm text-gray-400 border-b border-gray-100 cursor-not-allowed select-none">Mieszkańcy</span>
-            <span class="block px-5 py-3 font-display font-semibold uppercase text-sm text-gray-400 border-b border-gray-100 cursor-not-allowed select-none">Przydatne informacje</span>
             <RouterLink to="/kibice/bezpiecznie" class="block px-5 py-3 font-display font-semibold uppercase text-sm text-rally-black hover:bg-rally-yellow hover:text-rally-black transition-colors duration-150 border-b border-gray-100">Kibicuj Bezpiecznie</RouterLink>
+            <RouterLink to="/lokalizacje" class="block px-5 py-3 font-display font-semibold uppercase text-sm text-rally-black hover:bg-rally-yellow hover:text-rally-black transition-colors duration-150 border-b border-gray-100">Lokalizacje</RouterLink>
             <span class="block px-5 py-3 font-display font-semibold uppercase text-sm text-gray-400 cursor-not-allowed select-none">Sklep</span>
           </div>
         </li>

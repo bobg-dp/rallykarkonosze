@@ -1,7 +1,7 @@
 <template>
   <a
     href="#aktualnosci"
-    class="absolute bottom-20 md:bottom-10 left-1/2 -translate-x-1/2 z-50 group pointer-events-auto"
+    class="absolute bottom-20 md:bottom-10 left-1/2 -translate-x-1/2 z-31 group pointer-events-auto"
     aria-label="Przewiń do aktualności"
   >
     <div ref="arrowRef" class="relative">

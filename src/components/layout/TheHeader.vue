@@ -1,7 +1,7 @@
 <template>
   <header
     class="fixed top-0 left-0 right-0 z-50 flex flex-col transition-[filter] duration-300"
-    :class="scrolled ? 'shadow-lg' : ''"
+    :class="scrolled ? 'shadow-lg' : 'shadow md:shadow-none'"
   >
     <!-- Top bar -->
     <div

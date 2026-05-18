@@ -28,12 +28,12 @@
         <p
           class="font-display font-bold uppercase tracking-[0.3em] text-rally-yellow text-sm mb-2"
         >
-          RO 2026
+          Rally Karkonosze 2026 - Rajd Okręgowy
         </p>
         <h1
           class="font-display font-black uppercase text-rally-black text-4xl md:text-6xl mb-12"
         >
-          Zawodnicy<br />RO
+          Zawodnicy RO
         </h1>
         <div class="bg-gray-50 border border-gray-200 p-12 text-center">
           <p

@@ -16,14 +16,39 @@ const router = createRouter({
       component: () => import("../views/NewsView.vue"),
     },
     {
+      path: "/aktualnosci/1",
+      name: "news-article-1",
+      component: () => import("../views/NewsArticle1View.vue"),
+    },
+    {
       path: "/zawodnicy-ro",
       name: "drivers-ro",
       component: () => import("../views/DriversROView.vue"),
     },
     {
+      path: "/zawodnicy-ro/dokumenty",
+      name: "drivers-ro-documents",
+      component: () => import("../views/DriversRODocumentsView.vue"),
+    },
+    {
+      path: "/zawodnicy-ro/harmonogram",
+      name: "drivers-ro-schedule",
+      component: () => import("../views/DriversROScheduleView.vue"),
+    },
+    {
       path: "/zawodnicy-rs",
       name: "drivers-rs",
       component: () => import("../views/DriversRSView.vue"),
+    },
+    {
+      path: "/zawodnicy-rs/dokumenty",
+      name: "drivers-rs-documents",
+      component: () => import("../views/DriversRSDocumentsView.vue"),
+    },
+    {
+      path: "/zawodnicy-rs/harmonogram",
+      name: "drivers-rs-schedule",
+      component: () => import("../views/DriversRSScheduleView.vue"),
     },
     {
       path: "/kibice",
@@ -39,6 +64,11 @@ const router = createRouter({
       path: "/partnerzy",
       name: "partners",
       component: () => import("../views/PartnersView.vue"),
+    },
+    {
+      path: "/lokalizacje",
+      name: "locations",
+      component: () => import("../views/LocationsView.vue"),
     },
     {
       path: "/kontakt",
