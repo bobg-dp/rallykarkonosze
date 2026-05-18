@@ -86,7 +86,8 @@
     >
       <div
         v-if="mobileMenuOpen"
-        class="md:hidden bg-rally-black text-white"
+        class="md:hidden bg-rally-black text-white overflow-y-auto"
+        :style="{ maxHeight: `calc(100vh - ${topBarHeight})` }"
       >
         <MobileMenu @close="mobileMenuOpen = false" />
       </div>
@@ -95,7 +96,7 @@
 </template>
 
 <script setup>
-import { computed, ref, onMounted, onUnmounted } from 'vue'
+import { computed, ref, watch, onMounted, onUnmounted } from 'vue'
 import { RouterLink } from 'vue-router'
 import TheNav from './TheNav.vue'
 import MobileMenu from './MobileMenu.vue'
@@ -105,6 +106,10 @@ const scrolled = ref(false)
 const isCompactHeader = ref(false)
 const mobileMenuOpen = ref(false)
 const isMobile = ref(false)
+
+watch(mobileMenuOpen, (open) => {
+  document.body.style.overflow = open ? 'hidden' : ''
+})
 
 const topBarHeight = computed(() => {
   if (isMobile.value) {
@@ -133,5 +138,6 @@ onMounted(() => {
 onUnmounted(() => {
   window.removeEventListener('scroll', handleScroll)
   window.removeEventListener('resize', handleResize)
+  document.body.style.overflow = ''
 })
 </script>
