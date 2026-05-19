@@ -19,12 +19,31 @@ export class VisitCounterStore {
 
     try {
       const fileContent = await fs.readFile(this.filePath, "utf8");
-      const parsedState = JSON.parse(fileContent);
+      const normalizedContent = fileContent.trim();
 
-      this.state = {
-        totalVisits: Number(parsedState.totalVisits ?? 0),
-        updatedAt: parsedState.updatedAt ?? null,
-      };
+      if (!normalizedContent) {
+        await this.resetInvalidStateFile(
+          "Visit counter file is empty. Resetting to default state.",
+        );
+        return;
+      }
+
+      let parsedState;
+
+      try {
+        parsedState = JSON.parse(normalizedContent);
+      } catch (error) {
+        if (error instanceof SyntaxError) {
+          await this.resetInvalidStateFile(
+            "Visit counter file is not valid JSON. Resetting to default state.",
+          );
+          return;
+        }
+
+        throw error;
+      }
+
+      this.state = normalizeState(parsedState);
     } catch (error) {
       if (error.code !== "ENOENT") {
         throw error;
@@ -61,10 +80,37 @@ export class VisitCounterStore {
   }
 
   async persist() {
+    const temporaryFilePath = `${this.filePath}.tmp`;
+
     await fs.writeFile(
-      this.filePath,
+      temporaryFilePath,
       `${JSON.stringify(this.state, null, 2)}\n`,
       "utf8",
     );
+
+    await fs.rename(temporaryFilePath, this.filePath);
   }
+
+  async resetInvalidStateFile(message) {
+    console.warn(message);
+    this.state = { ...DEFAULT_STATE };
+    await this.persist();
+  }
+}
+
+function normalizeState(parsedState) {
+  if (
+    !parsedState ||
+    typeof parsedState !== "object" ||
+    Array.isArray(parsedState)
+  ) {
+    return { ...DEFAULT_STATE };
+  }
+
+  const totalVisits = Number(parsedState.totalVisits ?? 0);
+
+  return {
+    totalVisits: Number.isFinite(totalVisits) ? totalVisits : 0,
+    updatedAt: parsedState.updatedAt ?? null,
+  };
 }
