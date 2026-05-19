@@ -33,21 +33,34 @@ Example `backend.env` values for VPS:
 ```env
 PORT=8787
 CORS_ALLOWED_ORIGINS=https://rallykarkonosze.pl
-NOTICE_BOARD_API_URL=https://example.com/api/notices
+NOTICE_BOARD_API_URL=https://admin.sportity.com/api/documents
 NOTICE_BOARD_API_KEY=
-NOTICE_BOARD_AUTH_HEADER=x-api-key
+NOTICE_BOARD_AUTH_HEADER=X-Sportity-ApiKey
+NOTICE_BOARD_EVENT_ID_RO=
+NOTICE_BOARD_EVENT_PASSWORD_RO=
+NOTICE_BOARD_EVENT_ID_RS=
+NOTICE_BOARD_EVENT_PASSWORD_RS=
+NOTICE_BOARD_MOCK_MODE=false
 ```
 
 If the frontend will also be available under `https://www.rallykarkonosze.pl`, append that origin as well.
+
+The Sportity URL prefix stays the same for both boards. Each board has its own `password` and `event_id`, so the backend builds requests as `base/password/event_id`.
 
 Example `backend.local.env` values for local tests:
 
 ```env
 PORT=8787
 CORS_ALLOWED_ORIGINS=http://localhost:5173
-NOTICE_BOARD_API_URL=
+NOTICE_BOARD_API_URL=https://admin.sportity.com/api/documents
 NOTICE_BOARD_API_KEY=
-NOTICE_BOARD_AUTH_HEADER=x-api-key
+NOTICE_BOARD_AUTH_HEADER=X-Sportity-ApiKey
+NOTICE_BOARD_EVENT_ID_RO=
+NOTICE_BOARD_EVENT_PASSWORD_RO=
+NOTICE_BOARD_EVENT_ID_RS=
+NOTICE_BOARD_EVENT_PASSWORD_RS=
+NOTICE_BOARD_MOCK_MODE=true
+NOTICE_BOARD_MOCK_DATA_FILE=server/data/notice-board.sample.json
 ```
 
 ## Frontend Build Environment

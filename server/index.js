@@ -4,7 +4,10 @@ import cors from "cors";
 import express from "express";
 import { fileURLToPath } from "node:url";
 import path from "node:path";
-import { NoticeBoardClient } from "./services/noticeBoardClient.js";
+import {
+  NoticeBoardClient,
+  isNoticeBoardMockEnabled,
+} from "./services/noticeBoardClient.js";
 import { VisitCounterStore } from "./services/visitCounterStore.js";
 
 const rootDir = path.resolve(
@@ -28,7 +31,7 @@ function loadEnvFile(filePath, { override = false } = {}) {
   });
 }
 
-function resolveEnvFilePath(filePath) {
+function resolveProjectFilePath(filePath) {
   if (!filePath) {
     return null;
   }
@@ -49,7 +52,9 @@ if (process.env.NODE_ENV !== "production") {
   loadEnvFile(path.join(rootDir, "backend.local.env"), { override: true });
 }
 
-const explicitEnvFilePath = resolveEnvFilePath(process.env.BACKEND_ENV_FILE);
+const explicitEnvFilePath = resolveProjectFilePath(
+  process.env.BACKEND_ENV_FILE,
+);
 
 if (explicitEnvFilePath) {
   loadEnvFile(explicitEnvFilePath, { override: true });
@@ -77,17 +82,39 @@ const port = Number(process.env.PORT ?? 8787);
 const visitsFilePath = path.join(rootDir, "server", "data", "visits.json");
 const allowedOrigins = parseAllowedOrigins(process.env.CORS_ALLOWED_ORIGINS);
 const allowAnyOrigin = allowedOrigins.includes("*");
+const noticeBoardMockMode = isNoticeBoardMockEnabled(
+  process.env.NOTICE_BOARD_MOCK_MODE,
+);
+const noticeBoardMockDataPath = resolveProjectFilePath(
+  process.env.NOTICE_BOARD_MOCK_DATA_FILE,
+);
 
 const visitCounterStore = new VisitCounterStore(visitsFilePath);
 const noticeBoardClient = new NoticeBoardClient({
   apiUrl: process.env.NOTICE_BOARD_API_URL,
   apiKey: process.env.NOTICE_BOARD_API_KEY,
   authHeader: process.env.NOTICE_BOARD_AUTH_HEADER,
+  eventIds: {
+    ro: process.env.NOTICE_BOARD_EVENT_ID_RO,
+    rs: process.env.NOTICE_BOARD_EVENT_ID_RS,
+  },
+  eventPasswords: {
+    ro: process.env.NOTICE_BOARD_EVENT_PASSWORD_RO,
+    rs: process.env.NOTICE_BOARD_EVENT_PASSWORD_RS,
+  },
+  mockMode: noticeBoardMockMode,
+  mockDataPath: noticeBoardMockDataPath,
 });
 
 if (!allowAnyOrigin && allowedOrigins.length === 0) {
   console.warn(
     "CORS_ALLOWED_ORIGINS is empty. Browser requests from other origins will be rejected.",
+  );
+}
+
+if (noticeBoardMockMode) {
+  console.warn(
+    "NOTICE_BOARD_MOCK_MODE is enabled. Notice board endpoints will return sample data.",
   );
 }
 
@@ -136,9 +163,15 @@ app.post("/api/visits", async (request, response, next) => {
   }
 });
 
-app.get("/api/notices", async (request, response, next) => {
+app.get("/api/notices", (_request, response) => {
+  response.status(400).json({
+    error: "Use /api/notices/ro or /api/notices/rs.",
+  });
+});
+
+app.get("/api/notices/:board", async (request, response, next) => {
   try {
-    const result = await noticeBoardClient.fetchItems(request.query);
+    const result = await noticeBoardClient.fetchBoard(request.params.board);
     response.set("Cache-Control", "no-store");
     response.json(result);
   } catch (error) {

@@ -30,7 +30,7 @@
             </svg>
           </RouterLink>
           <div class="absolute top-full left-0 bg-white shadow-xl min-w-72 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 translate-y-1 group-hover:translate-y-0 z-50">
-            <span class="block px-5 py-3 font-display font-semibold uppercase text-sm text-gray-400 border-b border-gray-100 cursor-not-allowed select-none">Elektroniczna Tablica Ogłoszeń</span>
+            <RouterLink to="/zawodnicy-ro/tablica" class="block px-5 py-3 font-display font-semibold uppercase text-sm text-rally-black hover:bg-rally-yellow hover:text-rally-black transition-colors duration-150 border-b border-gray-100">Elektroniczna Tablica Ogłoszeń</RouterLink>
             <RouterLink to="/zawodnicy-ro/dokumenty" class="block px-5 py-3 font-display font-semibold uppercase text-sm text-rally-black hover:bg-rally-yellow hover:text-rally-black transition-colors duration-150 border-b border-gray-100">Dokumenty</RouterLink>
             <RouterLink to="/zawodnicy-ro/harmonogram" class="block px-5 py-3 font-display font-semibold uppercase text-sm text-rally-black hover:bg-rally-yellow hover:text-rally-black transition-colors duration-150 border-b border-gray-100">Harmonogram</RouterLink>
             <RouterLink to="/lokalizacje" class="block px-5 py-3 font-display font-semibold uppercase text-sm text-rally-black hover:bg-rally-yellow hover:text-rally-black transition-colors duration-150 border-b border-gray-100">Lokalizacje</RouterLink>
@@ -50,7 +50,7 @@
             </svg>
           </RouterLink>
           <div class="absolute top-full left-0 bg-white shadow-xl min-w-72 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 translate-y-1 group-hover:translate-y-0 z-50">
-            <span class="block px-5 py-3 font-display font-semibold uppercase text-sm text-gray-400 border-b border-gray-100 cursor-not-allowed select-none">Elektroniczna Tablica Ogłoszeń</span>
+            <RouterLink to="/zawodnicy-rs/tablica" class="block px-5 py-3 font-display font-semibold uppercase text-sm text-rally-black hover:bg-rally-yellow hover:text-rally-black transition-colors duration-150 border-b border-gray-100">Elektroniczna Tablica Ogłoszeń</RouterLink>
             <RouterLink to="/zawodnicy-rs/dokumenty" class="block px-5 py-3 font-display font-semibold uppercase text-sm text-rally-black hover:bg-rally-yellow hover:text-rally-black transition-colors duration-150 border-b border-gray-100">Dokumenty</RouterLink>
             <RouterLink to="/zawodnicy-rs/harmonogram" class="block px-5 py-3 font-display font-semibold uppercase text-sm text-rally-black hover:bg-rally-yellow hover:text-rally-black transition-colors duration-150 border-b border-gray-100">Harmonogram</RouterLink>
             <RouterLink to="/lokalizacje" class="block px-5 py-3 font-display font-semibold uppercase text-sm text-rally-black hover:bg-rally-yellow hover:text-rally-black transition-colors duration-150 border-b border-gray-100">Lokalizacje</RouterLink>

@@ -20,7 +20,7 @@
       </div>
       <div class="border-t border-rally-gray pt-2">
         <RouterLink to="/zawodnicy-ro" @click="$emit('close')" class="block py-2 font-display font-bold uppercase text-sm text-white hover:text-rally-yellow transition-colors">Zawodnicy RO</RouterLink>
-        <span class="block py-2 px-3 font-display font-semibold uppercase text-sm text-gray-500 cursor-not-allowed select-none">Elektroniczna Tablica Ogłoszeń</span>
+        <RouterLink to="/zawodnicy-ro/tablica" @click="$emit('close')" class="block py-2 px-3 font-display font-semibold uppercase text-sm text-white hover:text-rally-yellow transition-colors">Elektroniczna Tablica Ogłoszeń</RouterLink>
         <RouterLink to="/zawodnicy-ro/dokumenty" @click="$emit('close')" class="block py-2 px-3 font-display font-semibold uppercase text-sm text-white hover:text-rally-yellow transition-colors">Dokumenty</RouterLink>
         <RouterLink to="/zawodnicy-ro/harmonogram" @click="$emit('close')" class="block py-2 px-3 font-display font-semibold uppercase text-sm text-white hover:text-rally-yellow transition-colors">Harmonogram</RouterLink>
         <RouterLink to="/lokalizacje" @click="$emit('close')" class="block py-2 px-3 font-display font-semibold uppercase text-sm text-white hover:text-rally-yellow transition-colors">Lokalizacje</RouterLink>
@@ -28,7 +28,7 @@
       </div>
       <div class="border-t border-rally-gray pt-2">
         <RouterLink to="/zawodnicy-rs" @click="$emit('close')" class="block py-2 font-display font-bold uppercase text-sm text-white hover:text-rally-yellow transition-colors">Zawodnicy RS</RouterLink>
-        <span class="block py-2 px-3 font-display font-semibold uppercase text-sm text-gray-500 cursor-not-allowed select-none">Elektroniczna Tablica Ogłoszeń</span>
+        <RouterLink to="/zawodnicy-rs/tablica" @click="$emit('close')" class="block py-2 px-3 font-display font-semibold uppercase text-sm text-white hover:text-rally-yellow transition-colors">Elektroniczna Tablica Ogłoszeń</RouterLink>
         <RouterLink to="/zawodnicy-rs/dokumenty" @click="$emit('close')" class="block py-2 px-3 font-display font-semibold uppercase text-sm text-white hover:text-rally-yellow transition-colors">Dokumenty</RouterLink>
         <RouterLink to="/zawodnicy-rs/harmonogram" @click="$emit('close')" class="block py-2 px-3 font-display font-semibold uppercase text-sm text-white hover:text-rally-yellow transition-colors">Harmonogram</RouterLink>
         <RouterLink to="/lokalizacje" @click="$emit('close')" class="block py-2 px-3 font-display font-semibold uppercase text-sm text-white hover:text-rally-yellow transition-colors">Lokalizacje</RouterLink>

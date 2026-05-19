@@ -24,10 +24,10 @@
             <h2 class="font-display font-bold uppercase text-xl mb-2 group-hover:text-rally-yellow transition-colors">Harmonogram</h2>
             <p class="text-gray-400 text-sm">Szczegółowy plan wydarzeń i terminarz rajdu</p>
           </RouterLink>
-          <div class="block p-8 bg-rally-black opacity-40 cursor-not-allowed select-none">
-            <h2 class="font-display font-bold uppercase text-xl text-white mb-2">Elektroniczna Tablica Ogłoszeń</h2>
-            <p class="text-gray-400 text-sm">Komunikaty i ogłoszenia organizatora</p>
-          </div>
+          <RouterLink to="/zawodnicy-rs/tablica" class="block p-8 bg-rally-black text-white hover:bg-rally-gray transition-colors group">
+            <h2 class="font-display font-bold uppercase text-xl mb-2 group-hover:text-rally-yellow transition-colors">Elektroniczna Tablica Ogłoszeń</h2>
+            <p class="text-gray-400 text-sm">Komunikaty, publikacje i dokumenty pobierane na żywo z tablicy ogłoszeń</p>
+          </RouterLink>
           <div class="block p-8 bg-rally-black opacity-40 cursor-not-allowed select-none">
             <h2 class="font-display font-bold uppercase text-xl text-white mb-2">Lista Startowa</h2>
             <p class="text-gray-400 text-sm">Lista zgłoszeń zostanie opublikowana po zamknięciu zapisów</p>
