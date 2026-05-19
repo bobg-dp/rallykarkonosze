@@ -23,9 +23,6 @@ export async function trackVisit() {
 
   visitRequest = fetch(buildApiUrl("/api/visits"), {
     method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
   })
     .then(async (response) => {
       if (!response.ok) {
