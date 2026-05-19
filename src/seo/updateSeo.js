@@ -37,32 +37,32 @@ function buildPageSchema(canonicalUrl, seo) {
   if (seo.schemaType === 'SportsEvent') {
     return {
       ...basePage,
-      startDate: '2026-06-13',
-      endDate: '2026-06-14',
-      eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
-      eventStatus: 'https://schema.org/EventScheduled',
+      startDate: "2026-06-13",
+      endDate: "2026-06-14",
+      eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
+      eventStatus: "https://schema.org/EventScheduled",
       image: [toAbsoluteUrl(seo.image)],
       location: {
-        '@type': 'Place',
-        name: 'Jelenia Góra',
+        "@type": "Place",
+        name: "Jelenia Góra",
         address: {
-          '@type': 'PostalAddress',
-          addressLocality: 'Jelenia Góra',
-          addressCountry: 'PL',
+          "@type": "PostalAddress",
+          addressLocality: "Jelenia Góra",
+          addressCountry: "PL",
         },
       },
       organizer: {
-        '@type': 'SportsOrganization',
-        name: 'Automobilklub Karkonosze',
+        "@type": "MotorSportsOrganization",
+        name: "Automobilklub Karkonosze",
         url: SITE_URL,
-        email: 'biuro@rallykarkonosze.pl',
+        email: "biuro@rallykarkonosze.pl",
       },
-    }
+    };
   }
 
   if (seo.schemaType === 'NewsArticle') {
     return {
-      '@type': 'NewsArticle',
+      "@type": "NewsArticle",
       headline: seo.title,
       description: seo.description,
       image: [toAbsoluteUrl(seo.image)],
@@ -70,36 +70,36 @@ function buildPageSchema(canonicalUrl, seo) {
       dateModified: seo.dateModified || seo.datePublished,
       mainEntityOfPage: canonicalUrl,
       author: {
-        '@type': 'Organization',
+        "@type": "MotorSportsOrganization",
         name: SITE_NAME,
       },
       publisher: {
-        '@type': 'Organization',
+        "@type": "MotorSportsOrganization",
         name: SITE_NAME,
         logo: {
-          '@type': 'ImageObject',
+          "@type": "ImageObject",
           url: `${SITE_URL}/logo.png`,
         },
       },
       articleSection: seo.articleSection,
-      inLanguage: 'pl-PL',
-    }
+      inLanguage: "pl-PL",
+    };
   }
 
   if (seo.schemaType === 'ContactPage') {
     return {
       ...basePage,
       mainEntity: {
-        '@type': 'Organization',
-        name: 'Automobilklub Karkonosze',
-        email: 'biuro@rallykarkonosze.pl',
+        "@type": "MotorSportsOrganization",
+        name: "Automobilklub Karkonosze",
+        email: "biuro@rallykarkonosze.pl",
         address: {
-          '@type': 'PostalAddress',
-          addressLocality: 'Jelenia Góra',
-          addressCountry: 'PL',
+          "@type": "PostalAddress",
+          addressLocality: "Jelenia Góra",
+          addressCountry: "PL",
         },
       },
-    }
+    };
   }
 
   return basePage
@@ -169,19 +169,19 @@ export function buildHeadForRoute(route) {
 
   const graph = [
     {
-      '@type': 'Organization',
-      name: 'Automobilklub Karkonosze',
+      "@type": "MotorSportsOrganization",
+      name: "Automobilklub Karkonosze",
       url: SITE_URL,
       logo: `${SITE_URL}/logo.png`,
-      email: 'biuro@rallykarkonosze.pl',
+      email: "biuro@rallykarkonosze.pl",
     },
     {
-      '@type': 'WebSite',
+      "@type": "WebSite",
       name: SITE_NAME,
       url: SITE_URL,
-      inLanguage: 'pl-PL',
+      inLanguage: "pl-PL",
     },
-  ]
+  ];
 
   const breadcrumbSchema = buildBreadcrumbSchema(seo.breadcrumbs)
   if (breadcrumbSchema) {

@@ -37,6 +37,13 @@
 
       <div class="border-t border-rally-gray pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
         <p class="text-gray-500 text-xs">© 2026 AMG Rally Karkonosze. Wszelkie prawa zastrzeżone.</p>
+        <div
+          v-if="visitCountLabel"
+          class="rounded-full border border-rally-gray px-4 py-2 text-xs text-gray-300"
+        >
+          Licznik odwiedzin:
+          <span class="font-semibold text-white">{{ visitCountLabel }}</span>
+        </div>
         <a
           href="https://driftingpixel.com"
           target="_blank"
@@ -65,6 +72,16 @@
 </template>
 
 <script setup>
+import { computed } from 'vue'
 import { RouterLink } from 'vue-router'
 import { FACEBOOK_URL, INSTAGRAM_URL } from '../../constants/socialLinks'
+import { visitCounterState } from '../../services/visitCounter.js'
+
+const visitCountLabel = computed(() => {
+  if (visitCounterState.totalVisits === null) {
+    return null
+  }
+
+  return new Intl.NumberFormat('pl-PL').format(visitCounterState.totalVisits)
+})
 </script>
