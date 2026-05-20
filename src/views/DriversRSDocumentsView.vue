@@ -26,21 +26,15 @@
           Zawodnicy - RS<br />Dokumenty
         </h1>
 
-        <section class="bg-gray-50 border border-gray-200 p-8 md:p-10">
-          <h2
-            class="font-display font-bold uppercase text-rally-black text-xl md:text-2xl mb-3"
-          >
-            Regulamin Uzupełniający
-          </h2>
-          <p class="text-rally-gray mb-6">AMG Rally Karkonosze - RS</p>
-          <a
-            :href="documentUrl"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="inline-flex items-center justify-center bg-rally-black text-white font-display font-bold uppercase text-sm tracking-wider px-6 py-3 hover:bg-rally-gray transition-colors"
-          >
-            Otwórz PDF
-          </a>
+        <section class="grid gap-6">
+          <DocumentDownloadCard
+            v-for="document in documents"
+            :key="document.fileName"
+            :title="document.title"
+            :subtitle="document.subtitle"
+            :document-url="document.documentUrl"
+            :absolute-url="document.absoluteUrl"
+          />
         </section>
       </div>
     </main>
@@ -51,7 +45,27 @@
 <script setup>
 import TheHeader from "../components/layout/TheHeader.vue";
 import TheFooter from "../components/layout/TheFooter.vue";
+import DocumentDownloadCard from "../components/ui/DocumentDownloadCard.vue";
+import { SITE_URL } from "../seo/updateSeo.js";
 
-const fileName = "regulamin uzupełniający - RS - AMG Rally Karkonosze.pdf";
-const documentUrl = `/assets/files/${encodeURIComponent(fileName)}`;
+const documents = [
+  {
+    title: "Regulamin Uzupełniający",
+    subtitle: "AMG Rally Karkonosze - RS",
+    fileName: "regulamin uzupełniający - RS - AMG Rally Karkonosze.pdf",
+  },
+  {
+    title: "Regulamin RPP 2026",
+    subtitle: "Rajdowy Puchar Południa",
+    fileName: "regulamin-rpp-2026.pdf",
+  },
+].map((document) => {
+  const documentUrl = `/assets/files/${encodeURIComponent(document.fileName)}`;
+
+  return {
+    ...document,
+    documentUrl,
+    absoluteUrl: new URL(documentUrl, SITE_URL).toString(),
+  };
+});
 </script>
