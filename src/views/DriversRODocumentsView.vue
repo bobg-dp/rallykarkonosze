@@ -65,6 +65,11 @@ const documents = [
     fileName: "regulamin uzupełniający - RO - AMG Rally Karkonosze.pdf",
   },
   {
+    title: "Regulamin RSMDS 2026",
+    subtitle: "Rajdowe Samochodowe Mistrzostwa Dolnego Śląska",
+    fileName: "regulamin-rsmds-2026.pdf",
+  },
+  {
     title: "Regulamin RMP 2026",
     subtitle: "Rajdowe Mistrzostwa Południa",
     fileName: "regulamin-rmp-2026.pdf",
