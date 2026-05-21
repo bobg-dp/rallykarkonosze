@@ -269,6 +269,11 @@ export const routes = [
     },
   },
   {
+    path: "/oesy/:slug",
+    name: "stage-detail",
+    component: () => import("../views/StageDetailView.vue"),
+  },
+  {
     path: "/kontakt",
     name: "contact",
     component: () => import("../views/ContactView.vue"),

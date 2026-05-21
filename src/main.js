@@ -3,6 +3,7 @@ import App from './App.vue'
 import { routes, scrollBehavior } from './router/index.js'
 import './assets/main.css'
 import { allNews } from './data/news.js'
+import { allStages } from "./data/stages.js";
 
 export const createApp = ViteSSG(App, { routes, scrollBehavior })
 
@@ -11,5 +12,11 @@ export function includedRoutes(paths) {
 		(path) => !path.includes(':') && path !== '/aktualnosci/1',
 	)
 
-	return [...new Set([...staticPaths, ...allNews.map((article) => article.url)])]
+	return [
+    ...new Set([
+      ...staticPaths,
+      ...allNews.map((article) => article.url),
+      ...allStages.map((stage) => stage.path),
+    ]),
+  ];
 }

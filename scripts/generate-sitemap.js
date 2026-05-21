@@ -1,6 +1,7 @@
 import { writeFileSync } from 'node:fs'
 import { resolve } from 'node:path'
 import { allNews } from '../src/data/news.js'
+import { allStages } from "../src/data/stages.js";
 
 const SITE_URL = 'https://rallykarkonosze.pl'
 
@@ -28,7 +29,13 @@ const newsRoutes = allNews.map((article) => ({
   lastmod: article.modifiedAt,
 }))
 
-const allRoutes = [...staticRoutes, ...newsRoutes]
+const stageRoutes = allStages.map((stage) => ({
+  path: stage.path,
+  changefreq: "weekly",
+  priority: "0.7",
+}));
+
+const allRoutes = [...staticRoutes, ...newsRoutes, ...stageRoutes];
 
 function toAbsoluteUrl(path) {
   return new URL(path, SITE_URL).toString()

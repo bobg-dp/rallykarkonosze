@@ -92,4 +92,22 @@
     <priority>0.6</priority>
   </url>
 
+  <url>
+    <loc>https://rallykarkonosze.pl/oesy/zabobrze</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://rallykarkonosze.pl/oesy/chrosnica</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://rallykarkonosze.pl/oesy/struznica</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
 </urlset>

@@ -32,6 +32,7 @@
 
       <ShortcutsSection />
       <DirectorMessageSection />
+      <StageCardsSection />
       <FansInfoSection />
       <PartnersSection />
       <OrganizersSection />
@@ -49,6 +50,7 @@ import DirectorMessageSection from '../components/sections/DirectorMessageSectio
 import FansInfoSection from '../components/sections/FansInfoSection.vue'
 import NewsSection from '../components/sections/NewsSection.vue'
 import ShortcutsSection from '../components/sections/ShortcutsSection.vue'
+import StageCardsSection from '../components/sections/StageCardsSection.vue'
 import PartnersSection from '../components/sections/PartnersSection.vue'
 import OrganizersSection from '../components/sections/OrganizersSection.vue'
 </script>

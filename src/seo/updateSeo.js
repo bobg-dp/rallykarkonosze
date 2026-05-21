@@ -1,4 +1,5 @@
 import { getNewsArticleBySlug } from '../data/news.js'
+import { getStageBySlug } from "../data/stages.js";
 
 export const SITE_URL = 'https://rallykarkonosze.pl'
 export const SITE_NAME = 'AMG Rally Karkonosze 2026'
@@ -156,6 +157,33 @@ export function resolveSeo(route) {
       canonicalPath: article.url,
       noindex: false,
     }
+  }
+
+  if (route.name === "stage-detail") {
+    const stage = getStageBySlug(route.params?.slug);
+
+    if (!stage) {
+      return {
+        title: "Odcinek nie został znaleziony | AMG Rally Karkonosze 2026",
+        description: DEFAULT_DESCRIPTION,
+        image: DEFAULT_IMAGE,
+        breadcrumbs: [{ name: "Strona główna", path: "/" }],
+        canonicalPath: route.path || "/oesy",
+        noindex: true,
+      };
+    }
+
+    return {
+      title: `${stage.headline} | AMG Rally Karkonosze 2026`,
+      description: `${stage.headline} AMG Rally Karkonosze 2026. ${stage.typeLabel}, ${stage.dateLabel}, ${stage.distanceKm.toFixed(2)} km. Sprawdź zarys trasy oraz szybkie linki do startu i mety.`,
+      image: DEFAULT_IMAGE,
+      breadcrumbs: [
+        { name: "Strona główna", path: "/" },
+        { name: stage.headline, path: stage.path },
+      ],
+      canonicalPath: stage.path,
+      noindex: false,
+    };
   }
 
   return getFallbackSeo(route)
