@@ -111,6 +111,19 @@ async function createMap(element, options = {}) {
   const L = await getLeafletLibrary();
   const { linePoints, startPoint, finishPoint } = getStageGeometry();
 
+  const createPointIcon = ({ icon, label, variant }) =>
+    L.divIcon({
+      className: "stage-point-marker-wrapper",
+      html: `
+        <div class="stage-point-marker stage-point-marker--${variant}">
+          <span class="stage-point-marker__icon" aria-hidden="true">${icon}</span>
+        </div>
+      `,
+      iconSize: [70, 30],
+      iconAnchor: [variant === "start" ? 30 : 10, variant === "start" ? 10 : 10],
+      tooltipAnchor: [44, -18],
+    });
+
   const instance = L.map(element, {
     zoomControl: true,
     scrollWheelZoom: options.scrollWheelZoom ?? false,
@@ -138,22 +151,22 @@ async function createMap(element, options = {}) {
     lineJoin: "round",
   }).addTo(instance);
 
-  L.circleMarker(startPoint, {
-    radius: 8,
-    color: "#0d0d0d",
-    weight: 2,
-    fillColor: "#f8c800",
-    fillOpacity: 1,
+  L.marker(startPoint, {
+    icon: createPointIcon({
+      icon: "▶",
+      label: "START",
+      variant: "start",
+    }),
   })
     .addTo(instance)
     .bindTooltip("Start");
 
-  L.circleMarker(finishPoint, {
-    radius: 7,
-    color: "#0d0d0d",
-    weight: 2,
-    fillColor: "#ffffff",
-    fillOpacity: 1,
+  L.marker(finishPoint, {
+    icon: createPointIcon({
+      icon: "🏁",
+      label: "META",
+      variant: "finish",
+    }),
   })
     .addTo(instance)
     .bindTooltip("Meta");
@@ -276,5 +289,59 @@ onBeforeUnmount(() => {
 
 :deep(.leaflet-tooltip::before) {
   display: none;
+}
+
+:deep(.stage-point-marker-wrapper) {
+  background: transparent;
+  border: 0;
+}
+
+:deep(.stage-point-marker) {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  border-radius: 9px;
+  border: 2px solid #0d0d0d;
+  background: #ffffff;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.28);
+  padding: 5px 5px;
+  font-family: var(--font-family-display);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  line-height: 1;
+}
+
+:deep(.stage-point-marker__icon) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  border-radius: 9999px;
+  font-size: 11px;
+  line-height: 1;
+}
+
+:deep(.stage-point-marker__label) {
+  transform: translateY(1px);
+}
+
+:deep(.stage-point-marker--start) {
+  background: #f8c800;
+  color: #121212;
+}
+
+:deep(.stage-point-marker--start .stage-point-marker__icon) {
+  background: rgba(0, 0, 0, 0.14);
+}
+
+:deep(.stage-point-marker--finish) {
+  background: #ffffff;
+  color: #121212;
+}
+
+:deep(.stage-point-marker--finish .stage-point-marker__icon) {
+  background: rgba(0, 0, 0, 0.08);
 }
 </style>

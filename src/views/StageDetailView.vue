@@ -3,7 +3,7 @@
     <TheHeader />
 
     <main class="min-h-screen bg-[#f4f1e8] pt-32 pb-20 md:pt-44">
-      <div class="mx-auto max-w-7xl px-6 md:px-8" v-if="stage">
+      <div class="mx-auto max-w-7xl px-6 md:px-8 pt-10" v-if="stage">
         <p
           class="font-display text-sm font-bold uppercase tracking-[0.3em] text-rally-yellow-dark"
         >
@@ -40,7 +40,7 @@
                   Termin
                 </p>
                 <p
-                  class="mt-3 font-display text-2xl font-black uppercase text-rally-black"
+                  class="mt-3 font-display text-2xl font-bold font-grey-300 uppercase text-rally-black"
                 >
                   {{ stage.dateLabel }}
                 </p>
@@ -55,7 +55,7 @@
                   Dystans
                 </p>
                 <p
-                  class="mt-3 font-display text-2xl font-black uppercase text-rally-black"
+                  class="mt-3 font-display text-2xl font-bold text-yellow-800 uppercase text-rally-black"
                 >
                   {{ formatStageDistance(stage.distanceKm) }} km
                 </p>
@@ -70,7 +70,7 @@
                   Oznaczenie
                 </p>
                 <p
-                  class="mt-3 font-display text-2xl font-black uppercase text-rally-black"
+                  class="mt-3 font-display text-red-800 text-2xl  font-bold uppercase text-rally-black"
                 >
                   {{ stage.code }}
                 </p>
@@ -114,6 +114,42 @@
             </p>
           </div>
         </div>
+
+        <section
+          v-if="stage.videoEmbedUrl"
+          class="mt-12 overflow-hidden rounded-[2rem] border border-black/8 bg-white shadow-[0_28px_100px_rgba(0,0,0,0.08)]"
+        >
+          <div class="border-b border-black/8 px-6 py-5 md:px-8">
+            <p
+              class="font-display text-sm font-bold uppercase tracking-[0.28em] text-zinc-400"
+            >
+              Film z odcinka
+            </p>
+            <h2
+              class="mt-2 font-display text-3xl font-black uppercase leading-none text-rally-black md:text-4xl"
+            >
+              {{ stage.videoTitle || stage.headline }}
+            </h2>
+            <p class="mt-3 max-w-3xl text-base leading-7 text-zinc-600">
+              Osadzony materiał pomaga szybko zobaczyć charakter próby przed
+              wyjazdem na trasę.
+            </p>
+          </div>
+
+          <div class="bg-[#111111] p-3 md:p-5">
+            <div class="overflow-hidden rounded-[1.5rem] bg-black aspect-video">
+              <iframe
+                class="h-full w-full"
+                :src="stage.videoEmbedUrl"
+                :title="stage.videoTitle || stage.headline"
+                loading="lazy"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+        </section>
       </div>
 
       <div v-else class="mx-auto max-w-4xl px-6 md:px-8">

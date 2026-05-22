@@ -1,11 +1,11 @@
 const stages = [
   {
     slug: "zabobrze",
-    code: "OSS",
+    code: "OS 1",
     name: "Zabobrze",
     typeLabel: "Superoes",
     dateLabel: "13 czerwca 2026",
-    distanceKm: 3.3,
+    distanceKm: 6.7,
     start: [15.758749, 50.919724],
     finish: [15.758691, 50.919891],
     startMapsUrl:
@@ -89,17 +89,19 @@ const stages = [
   },
   {
     slug: "chrosnica",
-    code: "OS",
+    code: "OS 2, 4, 6",
     name: "Chrośnica",
     typeLabel: "Odcinek specjalny",
     dateLabel: "14 czerwca 2026",
-    distanceKm: 8.31,
+    distanceKm: 8.14,
     start: [15.736066, 50.992983],
     finish: [15.828249, 50.967422],
     startMapsUrl:
       "https://www.google.com/maps/dir/?api=1&destination=50.992983,15.736066",
     finishMapsUrl:
       "https://www.google.com/maps/dir/?api=1&destination=50.967422,15.828249",
+    videoTitle: "Chrośnica - film z trasy",
+    videoEmbedUrl: "https://www.youtube.com/embed/MipCFku91AE?start=1",
     shapePoints: [
       [15.73606, 50.99299],
       [15.73635, 50.99354],
@@ -177,17 +179,19 @@ const stages = [
   },
   {
     slug: "struznica",
-    code: "OS",
+    code: "OS 3,5,7 POWER STAGE",
     name: "Strużnica",
     typeLabel: "Odcinek specjalny",
     dateLabel: "14 czerwca 2026",
-    distanceKm: 8.6,
+    distanceKm: 8.39,
     start: [15.850954, 50.808067],
     finish: [15.86982, 50.852131],
     startMapsUrl:
       "https://www.google.com/maps/dir/?api=1&destination=50.808067,15.850954",
     finishMapsUrl:
       "https://www.google.com/maps/dir/?api=1&destination=50.852131,15.86982",
+    videoTitle: "Strużnica - film z trasy",
+    videoEmbedUrl: "https://www.youtube.com/embed/V6FAtHjBCdg?start=2",
     shapePoints: [
       [15.850942, 50.808054],
       [15.85108, 50.80855],

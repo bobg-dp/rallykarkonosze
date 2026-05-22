@@ -42,7 +42,7 @@
       <!-- Partnerzy -->
       <div class="mb-4">
         <h3 class="font-display font-bold uppercase tracking-widest text-rally-black text-sm mb-6 text-center opacity-50">Partnerzy</h3>
-        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 mb-8">
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 mb-8">
           <PartnerLogo v-for="item in partners" :key="item.name" :label="item.name" :logo="item.logo" :href="item.href" :link-title="item.linkTitle" />
         </div>
       </div>
@@ -153,6 +153,12 @@ const partners = [
     logo: '/assets/sponsors/ajot.jpg',
     href: 'https://ajot.pl',
     linkTitle: 'AJOT Elektroinstalatorstwo',
+  },
+  {
+    name: 'FT Krzemińscy - Transport krajowy i międzynarodowy"',
+    logo: '/assets/sponsors/krzeminscy.webp',
+    href: 'https://ftkrzeminscy.pl/',
+    linkTitle: 'FT Krzemińscy - Transport krajowy i międzynarodowy',
   },
   { name: 'Divemed Apartamenty', 
   logo: '/assets/sponsors/divemed-apartamenty.png',
