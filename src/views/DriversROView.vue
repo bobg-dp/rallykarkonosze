@@ -23,7 +23,7 @@
         </div>
         <p class="font-display font-bold uppercase tracking-[0.3em] text-rally-yellow text-sm mb-2">AMG Rally Karkonosze 2026 - Rajd Okręgowy</p>
         <h1 class="font-display font-black uppercase text-rally-black text-4xl md:text-6xl mb-12">Zawodnicy - RO</h1>
-        <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
+        <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           <RouterLink to="/zawodnicy-ro/tablica" class="block p-8 bg-rally-yellow text-rally-black hover:bg-rally-yellow-dark transition-colors group">
             <h2 class="font-display font-bold uppercase text-xl mb-2">Elektroniczna Tablica Ogłoszeń</h2>
             <p class="text-rally-black/75 text-sm">Komunikaty, publikacje i dokumenty pobierane na żywo z tablicy ogłoszeń</p>
