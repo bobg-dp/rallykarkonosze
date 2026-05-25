@@ -79,17 +79,6 @@
                   </li>
                   <li>
                     <span class="font-semibold text-rally-black">
-                      Formularz kontaktowy widoczny na stronie.
-                    </span>
-                    Na podstronie kontaktowej może być wyświetlany formularz,
-                    jednak obecnie nie wysyła on wiadomości do administratora i nie
-                    zapisuje danych w systemach serwisu. Do skutecznego kontaktu
-                    należy użyć adresu e-mail wskazanego na stronie. Jeśli w
-                    przyszłości formularz zostanie uruchomiony, polityka zostanie
-                    odpowiednio zaktualizowana.
-                  </li>
-                  <li>
-                    <span class="font-semibold text-rally-black">
                       Logi serwera i dane techniczne.
                     </span>
                     Podczas korzystania ze strony serwer automatycznie przetwarza
