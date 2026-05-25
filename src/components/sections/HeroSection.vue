@@ -21,11 +21,10 @@
       </svg>
     </div>
 
-    <!-- Content -->
     <div class="relative z-20 flex flex-col md:flex-row items-center justify-center h-full px-6 md:px-12 lg:px-20 gap-6 md:gap-10 lg:gap-16 text-center md:text-left">
 
       <!-- Logo splash – lewa strona na desktop -->
-      <div ref="logoRef" class="shrink-0 opacity-0">
+      <div ref="logoRef" class="hidden shrink-0 opacity-0 sm:block">
         <img
           src="/logo-splash.png"
           alt="AMG Rally Karkonosze"

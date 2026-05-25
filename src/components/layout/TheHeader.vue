@@ -5,11 +5,11 @@
   >
     <!-- Top bar -->
     <div
-      class="bg-white flex items-center justify-between px-4 md:px-8 transition-[height,min-height,padding] duration-300"
+      class="relative bg-white flex items-center justify-between px-4 md:px-8 transition-[height,min-height,padding] duration-300"
       :style="{ height: topBarHeight, minHeight: topBarHeight }"
     >
       <!-- Logo -->
-      <RouterLink to="/" class="flex items-center group shrink-0" aria-label="AMG Rally Karkonosze – strona główna">
+      <RouterLink to="/" class="relative z-10 flex items-center group shrink-0" aria-label="AMG Rally Karkonosze – strona główna">
         <img
           src="/logo.png"
           alt="AMG Rally Karkonosze"
@@ -18,8 +18,22 @@
         />
       </RouterLink>
 
+      <div
+        v-if="showCountdown"
+        class="pointer-events-none absolute inset-x-0 top-1/2 hidden -translate-y-1/2 justify-center px-40 md:flex"
+      >
+        <RallyCountdownBanner layout="inline" variant="light" />
+      </div>
+
+      <div
+        v-if="showCountdown"
+        class="pointer-events-none absolute left-1/2 top-1/2 z-0 w-[calc(100%-8rem)] max-w-[13rem] -translate-x-1/2 -translate-y-1/2 md:hidden"
+      >
+        <RallyCountdownBanner layout="compact" variant="light" />
+      </div>
+
       <!-- Desktop: social + wyniki -->
-      <div class="hidden md:flex items-center gap-4">
+      <div class="relative z-10 hidden md:flex items-center gap-4">
         <a
           :href="FACEBOOK_URL"
           target="_blank"
@@ -52,7 +66,7 @@
 
       <!-- Mobile: hamburger -->
       <button
-        class="md:hidden flex flex-col justify-center items-center gap-1.5 p-2"
+        class="relative z-10 md:hidden flex flex-col justify-center items-center gap-1.5 p-2"
         @click="mobileMenuOpen = !mobileMenuOpen"
         :aria-expanded="mobileMenuOpen"
         aria-label="Menu"
@@ -97,15 +111,18 @@
 
 <script setup>
 import { computed, ref, watch, onMounted, onUnmounted } from 'vue'
-import { RouterLink } from 'vue-router'
+import { RouterLink, useRoute } from 'vue-router'
 import TheNav from './TheNav.vue'
 import MobileMenu from './MobileMenu.vue'
+import RallyCountdownBanner from '../ui/RallyCountdownBanner.vue'
 import { FACEBOOK_URL, INSTAGRAM_URL } from '../../constants/socialLinks'
 
+const route = useRoute()
 const scrolled = ref(false)
 const isCompactHeader = ref(false)
 const mobileMenuOpen = ref(false)
 const isMobile = ref(false)
+const showCountdown = computed(() => route.name === 'home')
 
 watch(mobileMenuOpen, (open) => {
   document.body.style.overflow = open ? 'hidden' : ''
