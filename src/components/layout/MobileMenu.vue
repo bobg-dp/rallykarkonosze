@@ -23,6 +23,7 @@
         <RouterLink to="/zawodnicy-ro/tablica" @click="$emit('close')" class="block py-2 px-3 font-display font-semibold uppercase text-sm text-white hover:text-rally-yellow transition-colors">Elektroniczna Tablica Ogłoszeń</RouterLink>
         <RouterLink to="/zawodnicy-ro/dokumenty" @click="$emit('close')" class="block py-2 px-3 font-display font-semibold uppercase text-sm text-white hover:text-rally-yellow transition-colors">Dokumenty</RouterLink>
         <RouterLink to="/zawodnicy-ro/harmonogram" @click="$emit('close')" class="block py-2 px-3 font-display font-semibold uppercase text-sm text-white hover:text-rally-yellow transition-colors">Harmonogram</RouterLink>
+        <RouterLink to="/mapy" @click="$emit('close')" class="block py-2 px-3 font-display font-semibold uppercase text-sm text-white hover:text-rally-yellow transition-colors">Odcinki Specjalne (onboardy)</RouterLink>
         <RouterLink to="/lokalizacje" @click="$emit('close')" class="block py-2 px-3 font-display font-semibold uppercase text-sm text-white hover:text-rally-yellow transition-colors">Lokalizacje</RouterLink>
         <span class="block py-2 px-3 font-display font-semibold uppercase text-sm text-gray-500 cursor-not-allowed select-none">Lista Startowa</span>
       </div>
@@ -31,6 +32,7 @@
         <RouterLink to="/zawodnicy-rs/tablica" @click="$emit('close')" class="block py-2 px-3 font-display font-semibold uppercase text-sm text-white hover:text-rally-yellow transition-colors">Elektroniczna Tablica Ogłoszeń</RouterLink>
         <RouterLink to="/zawodnicy-rs/dokumenty" @click="$emit('close')" class="block py-2 px-3 font-display font-semibold uppercase text-sm text-white hover:text-rally-yellow transition-colors">Dokumenty</RouterLink>
         <RouterLink to="/zawodnicy-rs/harmonogram" @click="$emit('close')" class="block py-2 px-3 font-display font-semibold uppercase text-sm text-white hover:text-rally-yellow transition-colors">Harmonogram</RouterLink>
+        <RouterLink to="/mapy" @click="$emit('close')" class="block py-2 px-3 font-display font-semibold uppercase text-sm text-white hover:text-rally-yellow transition-colors">Odcinki Specjalne (onboardy)</RouterLink>
         <RouterLink to="/lokalizacje" @click="$emit('close')" class="block py-2 px-3 font-display font-semibold uppercase text-sm text-white hover:text-rally-yellow transition-colors">Lokalizacje</RouterLink>
         <span class="block py-2 px-3 font-display font-semibold uppercase text-sm text-gray-500 cursor-not-allowed select-none">Lista Startowa</span>
       </div>

@@ -33,6 +33,7 @@
             <RouterLink to="/zawodnicy-ro/tablica" class="block px-5 py-3 font-display font-semibold uppercase text-sm text-rally-black hover:bg-rally-yellow hover:text-rally-black transition-colors duration-150 border-b border-gray-100">Elektroniczna Tablica Ogłoszeń</RouterLink>
             <RouterLink to="/zawodnicy-ro/dokumenty" class="block px-5 py-3 font-display font-semibold uppercase text-sm text-rally-black hover:bg-rally-yellow hover:text-rally-black transition-colors duration-150 border-b border-gray-100">Dokumenty</RouterLink>
             <RouterLink to="/zawodnicy-ro/harmonogram" class="block px-5 py-3 font-display font-semibold uppercase text-sm text-rally-black hover:bg-rally-yellow hover:text-rally-black transition-colors duration-150 border-b border-gray-100">Harmonogram</RouterLink>
+            <RouterLink to="/mapy" class="block px-5 py-3 font-display font-semibold uppercase text-sm text-rally-black hover:bg-rally-yellow hover:text-rally-black transition-colors duration-150 border-b border-gray-100">Odcinki Specjalne (onboardy)</RouterLink>
             <RouterLink to="/lokalizacje" class="block px-5 py-3 font-display font-semibold uppercase text-sm text-rally-black hover:bg-rally-yellow hover:text-rally-black transition-colors duration-150 border-b border-gray-100">Lokalizacje</RouterLink>
             <span class="block px-5 py-3 font-display font-semibold uppercase text-sm text-gray-400 cursor-not-allowed select-none">Lista Startowa</span>
           </div>
@@ -53,6 +54,7 @@
             <RouterLink to="/zawodnicy-rs/tablica" class="block px-5 py-3 font-display font-semibold uppercase text-sm text-rally-black hover:bg-rally-yellow hover:text-rally-black transition-colors duration-150 border-b border-gray-100">Elektroniczna Tablica Ogłoszeń</RouterLink>
             <RouterLink to="/zawodnicy-rs/dokumenty" class="block px-5 py-3 font-display font-semibold uppercase text-sm text-rally-black hover:bg-rally-yellow hover:text-rally-black transition-colors duration-150 border-b border-gray-100">Dokumenty</RouterLink>
             <RouterLink to="/zawodnicy-rs/harmonogram" class="block px-5 py-3 font-display font-semibold uppercase text-sm text-rally-black hover:bg-rally-yellow hover:text-rally-black transition-colors duration-150 border-b border-gray-100">Harmonogram</RouterLink>
+            <RouterLink to="/mapy" class="block px-5 py-3 font-display font-semibold uppercase text-sm text-rally-black hover:bg-rally-yellow hover:text-rally-black transition-colors duration-150 border-b border-gray-100">Odcinki Specjalne (onboardy)</RouterLink>
             <RouterLink to="/lokalizacje" class="block px-5 py-3 font-display font-semibold uppercase text-sm text-rally-black hover:bg-rally-yellow hover:text-rally-black transition-colors duration-150 border-b border-gray-100">Lokalizacje</RouterLink>
             <span class="block px-5 py-3 font-display font-semibold uppercase text-sm text-gray-400 cursor-not-allowed select-none">Lista Startowa</span>
           </div>

@@ -1,7 +1,13 @@
 <template>
-  <RouterLink
-    :to="item.to"
-    class="group flex flex-col items-center text-center p-8 border border-rally-gray hover:border-rally-yellow hover:bg-rally-gray transition-all duration-300 cursor-pointer"
+  <component
+    :is="item.disabled ? 'div' : RouterLink"
+    v-bind="item.disabled ? { 'aria-disabled': 'true' } : { to: item.to }"
+    :class="[
+      'group flex flex-col items-center text-center p-8 border transition-all duration-300',
+      item.disabled
+        ? 'border-rally-gray/40 bg-rally-black/40 cursor-not-allowed opacity-75'
+        : 'border-rally-gray hover:border-rally-yellow hover:bg-rally-gray cursor-pointer',
+    ]"
   >
     <!-- Ikona / logotypy -->
     <div
@@ -11,7 +17,10 @@
       <div
         v-for="logo in item.logos"
         :key="logo.src"
-        class="flex items-center justify-center w-20 h-12 md:w-24 md:h-14 group-hover:scale-105 transition-transform duration-300"
+        :class="[
+          'flex items-center justify-center w-20 h-12 md:w-24 md:h-14 transition-transform duration-300',
+          item.disabled ? '' : 'group-hover:scale-105',
+        ]"
       >
         <img
           :src="logo.src"
@@ -24,19 +33,33 @@
 
     <div
       v-else
-      class="w-16 h-16 mb-5 flex items-center justify-center text-rally-yellow group-hover:scale-110 transition-transform duration-300"
+      :class="[
+        'w-16 h-16 mb-5 flex items-center justify-center text-rally-yellow transition-transform duration-300',
+        item.disabled ? '' : 'group-hover:scale-110',
+      ]"
     >
       <component :is="iconComponents[item.icon]" class="w-full h-full" />
     </div>
 
-    <h3 class="font-display font-bold uppercase text-white text-xl tracking-wide mb-2 group-hover:text-rally-yellow transition-colors duration-200">
+    <h3
+      :class="[
+        'font-display font-bold uppercase text-xl tracking-wide mb-2 transition-colors duration-200',
+        item.disabled ? 'text-white' : 'text-white group-hover:text-rally-yellow',
+      ]"
+    >
       {{ item.label }}
     </h3>
     <p class="text-gray-400 text-sm leading-relaxed">{{ item.desc }}</p>
+    <p v-if="item.note" class="mt-2 text-xs font-display font-bold uppercase tracking-[0.2em] text-rally-yellow/90">
+      {{ item.note }}
+    </p>
 
     <!-- Arrow indicator -->
-    <div class="mt-4 w-8 h-0.5 bg-rally-yellow scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
-  </RouterLink>
+    <div
+      v-if="!item.disabled"
+      class="mt-4 w-8 h-0.5 bg-rally-yellow scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"
+    ></div>
+  </component>
 </template>
 
 <script setup>

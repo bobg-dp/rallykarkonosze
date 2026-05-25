@@ -269,6 +269,20 @@ export const routes = [
     },
   },
   {
+    path: "/mapy",
+    name: "stage-maps",
+    component: () => import("../views/StageMapsView.vue"),
+    meta: {
+      title: "Mapy i odcinki specjalne | AMG Rally Karkonosze 2026",
+      description:
+        "Poznaj odcinki specjalne AMG Rally Karkonosze 2026 i sprawdź onboardy oraz najważniejsze informacje o trasach OS.",
+      breadcrumbs: [
+        { name: "Strona główna", path: "/" },
+        { name: "Mapy i odcinki", path: "/mapy" },
+      ],
+    },
+  },
+  {
     path: "/oesy/:slug",
     name: "stage-detail",
     component: () => import("../views/StageDetailView.vue"),
