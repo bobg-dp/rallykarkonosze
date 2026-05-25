@@ -131,16 +131,52 @@
               {{ stage.videoTitle || stage.headline }}
             </h2>
             <p class="mt-3 max-w-3xl text-base leading-7 text-zinc-600">
-              Osadzony materiał pomaga szybko zobaczyć charakter próby przed
+              Onboard pomaga szybko zobaczyć charakter próby przed
               wyjazdem na trasę.
             </p>
           </div>
 
           <div class="bg-[#111111] p-3 md:p-5">
             <div class="overflow-hidden rounded-[1.5rem] bg-black aspect-video">
+              <div
+                v-if="!isVideoConsentGranted"
+                class="flex h-full w-full flex-col justify-between bg-[radial-gradient(circle_at_top,rgba(248,200,0,0.18),transparent_45%),linear-gradient(145deg,#181818,#050505)] p-6 text-white md:p-8"
+              >
+                <div>
+                  <p class="font-display text-xs font-bold uppercase tracking-[0.26em] text-rally-yellow">
+                    Zewnętrzne wideo
+                  </p>
+                  <h3 class="mt-3 font-display text-2xl font-black uppercase leading-none md:text-3xl">
+                    Załaduj materiał z YouTube po wyrażeniu zgody
+                  </h3>
+                  <p class="mt-4 max-w-2xl text-sm leading-6 text-zinc-300 md:text-base md:leading-7">
+                    Film nie jest ładowany automatycznie. Kliknięcie przycisku
+                    spowoduje połączenie z YouTube i pobranie osadzonego materiału
+                    w trybie podwyższonej prywatności.
+                  </p>
+                </div>
+
+                <div class="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center">
+                  <button
+                    type="button"
+                    class="inline-flex items-center justify-center rounded-full bg-rally-yellow px-5 py-3 font-display text-sm font-bold uppercase tracking-[0.18em] text-rally-black transition-colors hover:bg-rally-yellow-dark"
+                    @click="grantVideoConsent"
+                  >
+                    Wyrażam zgodę i odtwarzam
+                  </button>
+                  <a
+                    :href="privacyPolicyPath"
+                    class="inline-flex items-center justify-center rounded-full border border-white/20 px-5 py-3 font-display text-sm font-bold uppercase tracking-[0.18em] text-white transition-colors hover:border-rally-yellow/60 hover:text-rally-yellow"
+                  >
+                    Zasady prywatności
+                  </a>
+                </div>
+              </div>
+
               <iframe
+                v-else
                 class="h-full w-full"
-                :src="stage.videoEmbedUrl"
+                :src="privacyEnhancedVideoUrl"
                 :title="stage.videoTitle || stage.headline"
                 loading="lazy"
                 referrerpolicy="strict-origin-when-cross-origin"
@@ -181,7 +217,7 @@
 </template>
 
 <script setup>
-import { computed } from "vue";
+import { computed, ref } from "vue";
 import { RouterLink, useRoute } from "vue-router";
 import TheHeader from "../components/layout/TheHeader.vue";
 import TheFooter from "../components/layout/TheFooter.vue";
@@ -190,6 +226,23 @@ import { getStageBySlug } from "../data/stages.js";
 import { formatStageDistance } from "../utils/stageShape.js";
 
 const route = useRoute();
+const isVideoConsentGranted = ref(false);
+const privacyPolicyPath = "/polityka-prywatnosci";
 
 const stage = computed(() => getStageBySlug(route.params.slug));
+
+const privacyEnhancedVideoUrl = computed(() => {
+  if (!stage.value?.videoEmbedUrl) {
+    return null;
+  }
+
+  return stage.value.videoEmbedUrl.replace(
+    "https://www.youtube.com/embed/",
+    "https://www.youtube-nocookie.com/embed/",
+  );
+});
+
+function grantVideoConsent() {
+  isVideoConsentGranted.value = true;
+}
 </script>

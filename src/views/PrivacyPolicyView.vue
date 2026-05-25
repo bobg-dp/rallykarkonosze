@@ -117,16 +117,19 @@
                     <span class="font-semibold text-rally-black">
                       Treści osadzone i zasoby zewnętrzne.
                     </span>
-                    Na wybranych podstronach strona może ładować materiały wideo z
-                    YouTube, kafelki map z OpenStreetMap oraz pojedyncze zasoby
-                    techniczne lub graficzne udostępniane z domen zewnętrznych. Po
-                    otwarciu takiej podstrony Twoja przeglądarka nawiązuje połączenie
-                    bezpośrednio z serwerem danego dostawcy, który może otrzymać dane
-                    techniczne, takie jak adres IP, informacje o urządzeniu,
-                    przeglądarce, czasie połączenia i adresie podstrony, z której
-                    nastąpiło odwołanie. Podstawą przetwarzania jest art. 6 ust. 1
-                    lit. f RODO, czyli nasz uzasadniony interes polegający na
-                    prezentacji materiałów i prawidłowym działaniu serwisu.
+                    Na wybranych podstronach strona może korzystać z materiałów
+                    wideo z YouTube, kafelków map z OpenStreetMap oraz pojedynczych
+                    zasobów technicznych lub graficznych udostępnianych z domen
+                    zewnętrznych. W przypadku materiałów wideo z YouTube treść nie
+                    jest ładowana automatycznie, lecz dopiero po wyrażeniu zgody
+                    przez użytkownika. Po załadowaniu takiej treści Twoja
+                    przeglądarka nawiązuje połączenie bezpośrednio z serwerem danego
+                    dostawcy, który może otrzymać dane techniczne, takie jak adres
+                    IP, informacje o urządzeniu, przeglądarce, czasie połączenia i
+                    adresie podstrony, z której nastąpiło odwołanie. Podstawą
+                    przetwarzania jest art. 6 ust. 1 lit. f RODO, czyli nasz
+                    uzasadniony interes polegający na prezentacji materiałów i
+                    prawidłowym działaniu serwisu.
                   </li>
                 </ul>
               </section>
@@ -146,8 +149,8 @@
                   Dodatkowo zewnętrzni dostawcy treści osadzonych lub zasobów
                   technicznych, w szczególności YouTube, mogą stosować własne pliki
                   cookies albo podobne technologie zgodnie z ich własnymi zasadami
-                  prywatności. Korzystanie z takich usług następuje w momencie
-                  otwarcia podstrony, na której osadzono dane treści lub zasoby.
+                  prywatności. W przypadku materiałów wideo YouTube ich załadowanie
+                  następuje dopiero po wyrażeniu zgody przez użytkownika.
                 </p>
               </section>
 
