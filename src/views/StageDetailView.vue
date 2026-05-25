@@ -151,8 +151,7 @@
                   </h3>
                   <p class="mt-4 max-w-2xl text-sm leading-6 text-zinc-300 md:text-base md:leading-7">
                     Film nie jest ładowany automatycznie. Kliknięcie przycisku
-                    spowoduje połączenie z YouTube i pobranie osadzonego materiału
-                    w trybie podwyższonej prywatności.
+                    spowoduje połączenie z YouTube w trybie podwyższonej prywatności.
                   </p>
                 </div>
 
