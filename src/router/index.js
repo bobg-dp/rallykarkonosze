@@ -302,6 +302,20 @@ export const routes = [
       ],
     },
   },
+  {
+    path: "/polityka-prywatnosci",
+    name: "privacy-policy",
+    component: () => import("../views/PrivacyPolicyView.vue"),
+    meta: {
+      title: "Polityka prywatności | AMG Rally Karkonosze 2026",
+      description:
+        "Polityka prywatności strony rallykarkonosze.pl: kontakt, dane techniczne, licznik odwiedzin, treści osadzone oraz prawa użytkownika.",
+      breadcrumbs: [
+        { name: "Strona główna", path: "/" },
+        { name: "Polityka prywatności", path: "/polityka-prywatnosci" },
+      ],
+    },
+  },
 ];
 
 export function scrollBehavior(to, from, savedPosition) {

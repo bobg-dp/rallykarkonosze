@@ -36,7 +36,12 @@
       </div>
 
       <div class="border-t border-rally-gray pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
-        <p class="text-gray-500 text-xs">© 2026 AMG Rally Karkonosze. Wszelkie prawa zastrzeżone.</p>
+        <div class="flex flex-wrap items-center justify-center gap-x-3 gap-y-1 text-xs text-gray-500">
+          <p>© 2026 AMG Rally Karkonosze. Wszelkie prawa zastrzeżone.</p>
+          <RouterLink to="/polityka-prywatnosci" class="hover:text-white transition-colors">
+            Polityka prywatności
+          </RouterLink>
+        </div>
         <div
           v-if="visitCountLabel"
           class="rounded-full border border-rally-gray px-4 py-2 text-xs text-gray-300"
