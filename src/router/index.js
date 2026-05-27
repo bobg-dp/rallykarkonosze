@@ -255,6 +255,20 @@ export const routes = [
     },
   },
   {
+    path: "/media",
+    name: "media",
+    component: () => import("../views/MediaView.vue"),
+    meta: {
+      title: "Media | AMG Rally Karkonosze 2026",
+      description:
+        "Strefa mediow AMG Rally Karkonosze 2026 z bezposrednim dostepem do formularza akredytacji prasowej.",
+      breadcrumbs: [
+        { name: "Strona główna", path: "/" },
+        { name: "Media", path: "/media" },
+      ],
+    },
+  },
+  {
     path: "/lokalizacje",
     name: "locations",
     component: () => import("../views/LocationsView.vue"),

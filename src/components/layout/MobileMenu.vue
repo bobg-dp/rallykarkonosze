@@ -44,6 +44,7 @@
         <span class="block py-2 px-3 font-display font-semibold uppercase text-sm text-gray-500 cursor-not-allowed select-none">Sklep</span>
       </div>
       <RouterLink to="/partnerzy" @click="$emit('close')" class="block py-2 font-display font-bold uppercase text-sm text-white hover:text-rally-yellow transition-colors border-t border-rally-gray">Partnerzy</RouterLink>
+      <RouterLink to="/media" @click="$emit('close')" class="block py-2 font-display font-bold uppercase text-sm text-white hover:text-rally-yellow transition-colors border-t border-rally-gray">Media</RouterLink>
       <RouterLink to="/kontakt" @click="$emit('close')" class="block py-2 font-display font-bold uppercase text-sm text-white hover:text-rally-yellow transition-colors border-t border-rally-gray">Kontakt</RouterLink>
     </nav>
   </div>

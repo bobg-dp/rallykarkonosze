@@ -18,6 +18,7 @@ const staticRoutes = [
   { path: '/kibice', changefreq: 'weekly', priority: '0.8' },
   { path: '/kibice/bezpiecznie', changefreq: 'monthly', priority: '0.6' },
   { path: '/partnerzy', changefreq: 'monthly', priority: '0.6' },
+  { path: '/media', changefreq: 'monthly', priority: '0.6' },
   { path: '/mapy', changefreq: 'weekly', priority: '0.8' },
   { path: '/lokalizacje', changefreq: 'monthly', priority: '0.7' },
   { path: '/kontakt', changefreq: 'yearly', priority: '0.5' },

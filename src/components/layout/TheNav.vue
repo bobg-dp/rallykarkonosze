@@ -88,6 +88,16 @@
           </RouterLink>
         </li>
 
+        <!-- Media -->
+        <li class="h-full flex items-center">
+          <RouterLink
+            to="/media"
+            class="font-display font-semibold uppercase tracking-wider text-sm text-white px-4 h-full flex items-center hover:text-rally-yellow transition-colors duration-200"
+          >
+            Media
+          </RouterLink>
+        </li>
+
         <!-- Kontakt -->
         <li class="h-full flex items-center">
           <RouterLink
