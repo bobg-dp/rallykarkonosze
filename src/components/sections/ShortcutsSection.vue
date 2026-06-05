@@ -59,8 +59,6 @@ const shortcuts = [
     label: 'Dla mieszkańców',
     desc: 'Zamknięcia dróg, harmonogram, informacje',
     to: '/kibice/mieszkancy',
-    disabled: true,
-    note: 'Materiały w przygotowaniu',
     icon: 'map-pin',
   },
   {

@@ -16,6 +16,7 @@ const staticRoutes = [
   { path: '/zawodnicy-rs/dokumenty', changefreq: 'weekly', priority: '0.7' },
   { path: '/zawodnicy-rs/harmonogram', changefreq: 'weekly', priority: '0.7' },
   { path: '/kibice', changefreq: 'weekly', priority: '0.8' },
+  { path: '/kibice/mieszkancy', changefreq: 'monthly', priority: '0.7' },
   { path: '/kibice/bezpiecznie', changefreq: 'monthly', priority: '0.6' },
   { path: '/partnerzy', changefreq: 'monthly', priority: '0.6' },
   { path: '/media', changefreq: 'monthly', priority: '0.6' },

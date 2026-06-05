@@ -71,7 +71,7 @@
             </svg>
           </button>
           <div class="absolute top-full left-0 bg-white shadow-xl min-w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 translate-y-1 group-hover:translate-y-0 z-50">
-            <span class="block px-5 py-3 font-display font-semibold uppercase text-sm text-gray-400 border-b border-gray-100 cursor-not-allowed select-none">Mieszkańcy</span>
+            <RouterLink to="/kibice/mieszkancy" class="block px-5 py-3 font-display font-semibold uppercase text-sm text-rally-black hover:bg-rally-yellow hover:text-rally-black transition-colors duration-150 border-b border-gray-100">Mieszkańcy</RouterLink>
             <RouterLink to="/kibice/bezpiecznie" class="block px-5 py-3 font-display font-semibold uppercase text-sm text-rally-black hover:bg-rally-yellow hover:text-rally-black transition-colors duration-150 border-b border-gray-100">Kibicuj Bezpiecznie</RouterLink>
             <RouterLink to="/lokalizacje" class="block px-5 py-3 font-display font-semibold uppercase text-sm text-rally-black hover:bg-rally-yellow hover:text-rally-black transition-colors duration-150 border-b border-gray-100">Lokalizacje</RouterLink>
             <span class="block px-5 py-3 font-display font-semibold uppercase text-sm text-gray-400 cursor-not-allowed select-none">Sklep</span>

@@ -38,7 +38,7 @@
       </div>
       <div class="border-t border-rally-gray">
         <p class="font-display font-bold uppercase text-rally-yellow text-xs tracking-widest mt-2 mb-1">Kibice</p>
-        <span class="block py-2 px-3 font-display font-semibold uppercase text-sm text-gray-500 cursor-not-allowed select-none">Mieszkańcy</span>
+        <RouterLink to="/kibice/mieszkancy" @click="$emit('close')" class="block py-2 px-3 font-display font-semibold uppercase text-sm text-white hover:text-rally-yellow transition-colors">Mieszkańcy</RouterLink>
         <RouterLink to="/kibice/bezpiecznie" @click="$emit('close')" class="block py-2 px-3 font-display font-semibold uppercase text-sm text-white hover:text-rally-yellow transition-colors">Kibicuj Bezpiecznie</RouterLink>
         <RouterLink to="/lokalizacje" @click="$emit('close')" class="block py-2 px-3 font-display font-semibold uppercase text-sm text-white hover:text-rally-yellow transition-colors">Lokalizacje</RouterLink>
         <span class="block py-2 px-3 font-display font-semibold uppercase text-sm text-gray-500 cursor-not-allowed select-none">Sklep</span>

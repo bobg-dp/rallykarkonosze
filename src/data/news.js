@@ -1,5 +1,33 @@
 const newsArticles = [
   {
+    id: 2,
+    slug: "testy-przed-rajdem",
+    title: "Testy przed rajdem",
+    excerpt:
+      "Przygotowaliśmy dla Was możliwość udziału w testach w dniu 11 czerwca.",
+    category: "Testy",
+    breadcrumbLabel: "Testy przed rajdem",
+    dateLabel: "5 czerwca 2026",
+    publishedAt: "2026-06-05",
+    modifiedAt: "2026-06-05",
+    image: "/assets/news/news2.webp",
+    body: [
+      "🏁 Uwaga Załogi!",
+      "W związku z licznymi pytaniami dotyczącymi odcinka testowego, którego nie przewidzieliśmy w harmonogramie rajdu, przygotowaliśmy dla Was możliwość udziału w testach w dniu 11 czerwca.",
+      "To doskonała okazja, aby sprawdzić samochód i dopracować ustawienia przed startem AMG Rally Karkonosze 2026.",
+      "⚠️ Liczba miejsc ograniczona.",
+      "📞 Więcej informacji: 780 133 216",
+      "📧 biuro@akkarkonosze.pl",
+    ],
+    ctas: [
+      {
+        label: "Kontakt",
+        to: "/kontakt",
+        theme: "dark",
+      },
+    ],
+  },
+  {
     id: 1,
     slug: "otwarto-zapisy-na-amg-rally-karkonosze-2026",
     title: "Otwarto zapisy na AMG Rally Karkonosze 2026",

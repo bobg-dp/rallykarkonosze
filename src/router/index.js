@@ -51,7 +51,11 @@ export const routes = [
   },
   {
     path: "/aktualnosci/1",
-    redirect: allNews[0]?.url || "/aktualnosci",
+    redirect: allNews.find((article) => article.id === 1)?.url || "/aktualnosci",
+  },
+  {
+    path: "/aktualnosci/2",
+    redirect: allNews.find((article) => article.id === 2)?.url || "/aktualnosci",
   },
   {
     path: "/zawodnicy-ro",
@@ -222,6 +226,21 @@ export const routes = [
       breadcrumbs: [
         { name: "Strona główna", path: "/" },
         { name: "Kibice", path: "/kibice" },
+      ],
+    },
+  },
+  {
+    path: "/kibice/mieszkancy",
+    name: "fans-residents",
+    component: () => import("../views/FansResidentsView.vue"),
+    meta: {
+      title: "Mieszkańcy | AMG Rally Karkonosze 2026",
+      description:
+        "Informacje dla mieszkańców rejonów odcinków specjalnych AMG Rally Karkonosze 2026: ulotki, zamknięcia dróg i harmonogramy dla OS Zabobrze, Chrośnica i Strużnica.",
+      breadcrumbs: [
+        { name: "Strona główna", path: "/" },
+        { name: "Kibice", path: "/kibice" },
+        { name: "Mieszkańcy", path: "/kibice/mieszkancy" },
       ],
     },
   },

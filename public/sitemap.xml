@@ -62,6 +62,12 @@
   </url>
 
   <url>
+    <loc>https://rallykarkonosze.pl/kibice/mieszkancy</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
     <loc>https://rallykarkonosze.pl/kibice/bezpiecznie</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -101,6 +107,13 @@
     <loc>https://rallykarkonosze.pl/polityka-prywatnosci</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://rallykarkonosze.pl/aktualnosci/testy-przed-rajdem</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
 
   <url>
