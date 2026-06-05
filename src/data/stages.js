@@ -179,7 +179,7 @@ const stages = [
   },
   {
     slug: "struznica",
-    code: "OS 3,5,7 POWER STAGE",
+    code: "OS 3, 5, 7 POWER STAGE",
     name: "Strużnica",
     typeLabel: "Odcinek specjalny",
     dateLabel: "14 czerwca 2026",
