@@ -58,6 +58,10 @@ export const routes = [
     redirect: allNews.find((article) => article.id === 2)?.url || "/aktualnosci",
   },
   {
+    path: "/aktualnosci/3",
+    redirect: allNews.find((article) => article.id === 3)?.url || "/aktualnosci",
+  },
+  {
     path: "/zawodnicy-ro",
     name: "drivers-ro",
     component: () => import("../views/DriversROView.vue"),

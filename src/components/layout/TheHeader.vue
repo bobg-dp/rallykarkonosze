@@ -57,7 +57,7 @@
           </svg>
         </a>
         <a
-          href="#"
+          href="https://rallydevil.com/rajd/amg-rally-karkonosze-2026-rajd-okregowy/wyniki"
           class="ml-4 bg-rally-yellow text-rally-black font-display font-bold uppercase tracking-wider text-sm px-4 py-2 hover:bg-rally-yellow-dark transition-colors duration-200"
         >
           Wyniki Online
