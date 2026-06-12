@@ -50,13 +50,12 @@
         </div>
 
         <div class="flex flex-col sm:flex-row gap-4">
-          <RouterLink
+          <component
             v-for="cta in article.ctas"
             :key="cta.to"
-            :to="cta.to"
-            :class="cta.theme === 'dark'
-              ? 'inline-flex items-center justify-center gap-2 bg-rally-black text-white font-display font-bold uppercase text-sm tracking-wider px-7 py-4 hover:bg-rally-gray transition-colors'
-              : 'inline-flex items-center justify-center gap-2 bg-rally-yellow text-rally-black font-display font-bold uppercase text-sm tracking-wider px-7 py-4 hover:brightness-90 transition-all'"
+            :is="isExternalLink(cta.to) ? 'a' : RouterLink"
+            v-bind="getCtaLinkProps(cta.to)"
+            :class="getCtaClass(cta.theme)"
           >
             <svg
               class="w-4 h-4 shrink-0"
@@ -64,11 +63,16 @@
               viewBox="0 0 24 24"
             >
               <path
+                v-if="isExternalLink(cta.to)"
+                d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3zM5 5h6V3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-6h-2v6H5V5z"
+              />
+              <path
+                v-else
                 d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2zM7 12h5v5H7z"
               />
             </svg>
             {{ cta.label }}
-          </RouterLink>
+          </component>
         </div>
       </div>
 
@@ -97,4 +101,26 @@ import { getNewsArticleBySlug } from "../data/news.js";
 
 const route = useRoute();
 const article = computed(() => getNewsArticleBySlug(route.params.slug));
+
+function isExternalLink(url) {
+  return /^https?:\/\//.test(url);
+}
+
+function getCtaLinkProps(url) {
+  if (isExternalLink(url)) {
+    return {
+      href: url,
+      target: "_blank",
+      rel: "noopener noreferrer",
+    };
+  }
+
+  return { to: url };
+}
+
+function getCtaClass(theme) {
+  return theme === "dark"
+    ? "inline-flex items-center justify-center gap-2 bg-rally-black text-white font-display font-bold uppercase text-sm tracking-wider px-7 py-4 hover:bg-rally-gray transition-colors"
+    : "inline-flex items-center justify-center gap-2 bg-rally-yellow text-rally-black font-display font-bold uppercase text-sm tracking-wider px-7 py-4 hover:brightness-90 transition-all";
+}
 </script>
