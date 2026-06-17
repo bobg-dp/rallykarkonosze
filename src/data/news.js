@@ -1,5 +1,32 @@
 const newsArticles = [
   {
+    id: 4,
+    slug: "wyniki-amg-rally-karkonosze-2026",
+    title: "Wyniki AMG Rally Karkonosze 2026",
+    excerpt:
+      "AMG Rally Karkonosze 2026 jako druga runda RMP przyniósł emocjonującą rywalizację i komplet oficjalnych wyników w klasyfikacji generalnej, Open oraz klasach.",
+    category: "Wyniki",
+    breadcrumbLabel: "Wyniki 2026",
+    dateLabel: "17 czerwca 2026",
+    publishedAt: "2026-06-17",
+    modifiedAt: "2026-06-17",
+    image: "/assets/news/news.webp",
+    body: [
+      "AMG Rally Karkonosze 2026 zapisał się jako drugi punkt tegorocznego sezonu Rajdowych Mistrzostw Południa. Po latach przerwy kultowe odcinki specjalne znane z historii rajdów w regionie wróciły na mapę rajdowej Polski, a karkonoska runda po raz pierwszy gościła załogi rywalizujące w cyklu RMP.",
+      "Rozegrany w dniach 13-14 czerwca rajd, organizowany przez Automobilklub Karkonosze, połączył sportową rywalizację z powrotem na trasy, które przez lata budowały renomę motorsportu w okolicach Jeleniej Góry. Załogi miały do pokonania siedem odcinków specjalnych, a oficjalne wyniki przyniosły rozstrzygnięcia zarówno w klasyfikacji generalnej, klasyfikacji RMP OPEN jak i w poszczególnych klasach.",
+      "Triumf w pierwszej edycji AMG Rally Karkonosze na poziomie rajdów okręgowych odnieśli Andrzej Stec i Kamil Papaj, którzy w swoim Citroen DS3 1.6 Racing RallyN1 wyprzedzili liderów klasyfikacji rocznej Jacka Bieszczada i Pawła Piczaka. Podium uzupełnili Kamil Michta i Andrzej Mrowczyk. Warto wspomnieć, że po czterech odcinkach na pewnym prowadzeniu był młody kierowca Dominik Wołowiec z doświadczonym pilotem Piotrem Sieliło, jednak na piątej próbie awaria ich samochodu przekreśliła szansę na zwycięstwo.",
+      "W klasyfikacji RMP Open najlepsi okazali się Bartosz Stypuła i Konrad Ziejewski, którzy dostarczyli kibicom dużo emocji w ich Subaru Imprezie. Na drugim miejscu finiszowali Sebastian Butyński i Łukasz Jastrzębski, a trzecią pozycję zajęli Marek Mularczyk i Aleksandra Przybyłek.",
+      "W klasie RN1 zwyciężyli - podobnie jak w klasyfikacji generalnej - Andrzej Stec i Kamil Papaj, przed Jackiem Bieszczadem i Pawłem Piczakiem oraz Kamilem Michtą i Andrzejem Mrowczykiem. W klasie RN2 sklasyfikowana została załoga Mateusz Kozioł i Sylwia Kozioł, a w RN3 triumfowali Łukasz Godula i Daniel Nowak przed duetem Damian Boncela / Jacek Wasilewski oraz załogą Michał Radłowicz / Grzegorz Lipowczan.",
+      "W klasyfikacji Classic zwyciężyli Grzegorz Olchawski i Przemysław Bosek, którzy dowieźli swoje piękne Audi Quattro S1 do mety w Jeleniej Górze.",
+      "W klasach Open rywalizacja również przyniosła wyraźnych zwycięzców. W Open 1 najlepsi byli Bartosz Stypuła i Konrad Ziejewski, przed Sebastianem Butyńskim i Łukaszem Jastrzębskim oraz załogą Tomasz Jurkun / Oliwier Jurkun. W Open 2 triumfowali Marek Mularczyk i Aleksandra Przybyłek, a podium uzupełnili Rafał Wyderka i Marcin Nawrol oraz Marcin Mikołajek i Paweł Daniec. W Open 3 pierwsze miejsce zajęli Maciej Hałoń i Krzysztof Mazur, drugie Kordian Pelczar i Adam Janiszyn, a trzecie Maciej Jendrych i Jakub Kubicki.",
+      "W klasyfikacji Rally Sprint, który stanowił drugą rundę Rajdowego Pucharu Południa, triumfowali Andrzej Szewczyk i Daniel Baron. Podobnie jak na otwarcie sezonu załoga Forda Focusa okazała się najszybsza, lecz tym razem do samego końca musieli utrzymywać wysokie tempo. Osiem sekund za nimi finiszowali Piotr Czypionka i Rafał Ruszkiewicz, którzy mieli zaledwie 1,7s przewagi nad jedyną w pełni kobiecą załogą rajdu - Gabrielą Sokołowską i Otylią Potkańską.",
+      "AMG Rally Karkonosze udanie wpisał się w kalendarz Rajdowych Mistrzostw Południa, przywracając zawodnikom i kibicom odcinki, które przez lata kojarzyły się z dużymi emocjami i wymagającą, górską charakterystyką. Debiut rajdu w roli rundy RMP pokazał, że karkonoskie trasy wciąż mają ogromny potencjał sportowy i mogą być jednym z najbardziej charakterystycznych punktów na mapie rajdowej Polski.",
+      "Następną rundą cyklu będzie Valvoline Rajd Małopolski, który zostanie rozegrany w dniach 2-4 lipca 2026 r.",
+      "Zdjęcia fot. Rozmus Photography: https://rozmusphotography.com/",
+    ],
+    ctas: [],
+  },
+  {
     id: 3,
     slug: "55-zalog-na-liscie-zgloszen-do-amg-rally-karkonosze",
     title: "55 załóg na liście zgłoszeń do AMG Rally Karkonosze",
