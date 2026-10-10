@@ -688,6 +688,13 @@ onBeforeUnmount(() => {
   }
 }
 
+@media (orientation: landscape) {
+  .sniezka-promo {
+    height: 90dvh;
+    max-height: 90dvh;
+  }
+}
+
 @media (max-width: 640px) {
   .sniezka-promo-cta {
     letter-spacing: 0.03em;
